@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 14:29:44 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/18 16:52:27 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/18 19:37:34 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,22 +34,23 @@ typedef struct		s_arg
 	int				a;
 	int				r;
 	int				t;
+	int				u;
 }					t_arg;
 
-typedef struct		s_ls
+typedef struct		s_obj
 {
 	char			*name;
 	char			*path;
 	time_t			date;
-	mode_t			mode_file;
-	uid_t			uid;
-	gid_t			gid;
-	nlink_t			link_count;
-	off_t			size;
-	quad_t			blocks;
-	dev_t			dev_id;
+	mode_t			st_mode;
+	uid_t			st_uid;
+	gid_t			st_gid;
+	nlink_t			st_nlink;
+	quad_t			st_blocks;
+	off_t			st_size;
+	dev_t			st_rdev;
 	int				not_a_dir;
-	struct s_ls		*next;
-}					t_ls;
+	struct s_obj	*next;
+}					t_obj;
 
 #endif

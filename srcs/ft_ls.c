@@ -6,14 +6,13 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 15:37:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/18 17:07:40 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/18 19:37:27 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/ft_ls.h"
-# include <stdio.h>
 
-void		ft_error_arg(char arg)
+static void	ft_error_arg(char arg)
 {
 	ft_putstr_fd("ft_ls: illegal option -- ", 2);
 	ft_putchar_fd(arg, 2);
@@ -21,14 +20,14 @@ void		ft_error_arg(char arg)
 	exit(EXIT_FAILURE);
 }
 
-void		ft_get_arg(t_arg *arg, char *curr_arg)
+static void	ft_get_arg(t_arg *arg, char *curr_arg)
 {
 	size_t	i;
 
 	i = 0;
 	while (curr_arg[++i])
 	{
-		if (ft_stroneof(curr_arg[i], "1lRart") != ERROR || \
+		if (ft_stroneof(curr_arg[i], "1lRartu") != ERROR || \
 				(curr_arg[1] == '-' && !curr_arg[2]))
 		{
 			arg->l = (curr_arg[i] == 'l' ? 1 : 0);
@@ -42,7 +41,7 @@ void		ft_get_arg(t_arg *arg, char *curr_arg)
 	}
 }
 
-void		ft_parse_arg(int argc, char **argv, t_arg *arg, t_list **lst)
+static void	ft_parse_arg(int argc, char **argv, t_arg *arg, t_list **lst)
 {
 	int		nb_arg;
 	char	*curr_arg;
@@ -69,7 +68,7 @@ int			main(int argc, char **argv)
 	if (argc > 1)
 		ft_parse_arg(argc, argv, &arg, &lst);
 	if (lst == NULL)
-		lst = ft_lstnew(".", ft_strlen("."));
-	//core(arg, lst, lst->next != NULL ? 1 : 0);
+		lst = ft_lstnew(".", 1);
+	ft_ls_process(arg, lst, lst->next != NULL ? 1 : 0);
 	return (0);
 }
