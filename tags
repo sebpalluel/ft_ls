@@ -32,6 +32,7 @@ BUTTONPRESSMASK	libft/includes/libft_define.h	/^# define BUTTONPRESSMASK	/;"	d
 BUTTONRELEASE	libft/includes/libft_define.h	/^# define BUTTONRELEASE	/;"	d
 BUTTONRELEASEMASK	libft/includes/libft_define.h	/^# define BUTTONRELEASEMASK	/;"	d
 B_KEY	libft/includes/libft_define.h	/^# define B_KEY	/;"	d
+CMP	Makefile	/^CMP			=	gcc$/;"	m
 CMP	libft/Makefile	/^CMP		=	gcc$/;"	m
 COLORMAPCHANGEMASK	libft/includes/libft_define.h	/^# define COLORMAPCHANGEMASK	/;"	d
 COLORS	includes/ft_ls_define.h	/^# define COLORS /;"	d
@@ -39,6 +40,7 @@ CTRL	libft/includes/libft_define.h	/^# define CTRL	/;"	d
 CTYPEPATH	libft/Makefile	/^CTYPEPATH = ctype\/$/;"	m
 C_KEY	libft/includes/libft_define.h	/^# define C_KEY	/;"	d
 DATE	includes/ft_ls_define.h	/^# define DATE /;"	d
+DEBUG	Makefile	/^DEBUG		=	-g3 -fsanitize=address$/;"	m
 DOT_KEY	libft/includes/libft_define.h	/^# define DOT_KEY	/;"	d
 DOWN	libft/includes/libft_define.h	/^# define DOWN	/;"	d
 D_KEY	libft/includes/libft_define.h	/^# define D_KEY	/;"	d
@@ -50,11 +52,13 @@ ERROR	libft/includes/libft_define.h	/^# define ERROR	/;"	d
 ESC	libft/includes/libft_define.h	/^# define ESC	/;"	d
 EXPOSE	libft/includes/libft_define.h	/^# define EXPOSE	/;"	d
 EXPOSUREMASK	libft/includes/libft_define.h	/^# define EXPOSUREMASK	/;"	d
+EXT	Makefile	/^EXT			=	Makefile$/;"	m
 E_KEY	libft/includes/libft_define.h	/^# define E_KEY	/;"	d
 FDPATH	libft/Makefile	/^FDPATH = fd\/$/;"	m
 FD_MAX	libft/includes/libft_define.h	/^# define FD_MAX	/;"	d
 FILENAMEMAXLEN	includes/ft_ls_define.h	/^# define FILENAMEMAXLEN /;"	d
 FIVE	libft/includes/libft_define.h	/^# define FIVE	/;"	d
+FLAGS	Makefile	/^FLAGS		=	-Wall -Wextra -Werror -lpthread $/;"	m
 FLAGS	libft/Makefile	/^FLAGS	=	-ggdb -Wall -Wextra -Werror$/;"	m
 FOCUSCHANGEMASK	libft/includes/libft_define.h	/^# define FOCUSCHANGEMASK	/;"	d
 FONT_HEIGHT	libft/minilibx/mlx_int.h	/^#define	FONT_HEIGHT	/;"	d
@@ -85,6 +89,8 @@ LEFT	libft/includes/libft_define.h	/^# define LEFT	/;"	d
 LIBFT_DEFINE_H	libft/includes/libft_define.h	/^# define LIBFT_DEFINE_H$/;"	d
 LIBFT_H	libft/includes/libft.h	/^# define LIBFT_H$/;"	d
 LIBFT_STRUCT_H	libft/includes/libft_struct.h	/^# define LIBFT_STRUCT_H$/;"	d
+LIBS	Makefile	/^LIBS		=	-lft$/;"	m
+LIB_DIR	Makefile	/^LIB_DIR		=	-L libft\/$/;"	m
 LISTPATH	libft/Makefile	/^LISTPATH = list\/$/;"	m
 LNKS	includes/ft_ls_define.h	/^# define LNKS /;"	d
 LS_FLAGS	includes/ft_ls_define.h	/^# define LS_FLAGS /;"	d
@@ -105,12 +111,14 @@ MOUSE_LEFT	libft/includes/libft_define.h	/^# define MOUSE_LEFT	/;"	d
 MOUSE_RIGHT	libft/includes/libft_define.h	/^# define MOUSE_RIGHT	/;"	d
 MOUSE_SIDE	libft/includes/libft_define.h	/^# define MOUSE_SIDE	/;"	d
 M_KEY	libft/includes/libft_define.h	/^# define M_KEY	/;"	d
+NAME	Makefile	/^NAME = ft_ls$/;"	m
 NAME	libft/Makefile	/^NAME	=	libft.a$/;"	m
 NINE	libft/includes/libft_define.h	/^# define NINE	/;"	d
 NOEVENTMASK	libft/includes/libft_define.h	/^# define NOEVENTMASK	/;"	d
 NOM	libft/minilibx/Makefile	/^NOM=libmlx.a$/;"	m
 NOTIFY	libft/includes/libft_define.h	/^# define NOTIFY	/;"	d
 N_KEY	libft/includes/libft_define.h	/^# define N_KEY	/;"	d
+OBJ	Makefile	/^OBJ			=	$(SRC:.c=.o)$/;"	m
 OBJ	libft/minilibx/Makefile	/^OBJ=$(OBJ1:.m=.o)$/;"	m
 OBJ1	libft/minilibx/Makefile	/^OBJ1=$(SRC:.c=.o)$/;"	m
 OBJDIR	libft/Makefile	/^OBJDIR = .\/objs\/$/;"	m
@@ -144,6 +152,7 @@ SIX	libft/includes/libft_define.h	/^# define SIX	/;"	d
 SIZE	includes/ft_ls_define.h	/^# define SIZE /;"	d
 SLASH	libft/includes/libft_define.h	/^# define SLASH	/;"	d
 SLASH_KEY	libft/includes/libft_define.h	/^# define SLASH_KEY	/;"	d
+SRC	Makefile	/^SRC 		=	srcs\/ft_ls.c \\$/;"	m
 SRC	libft/Makefile	/^SRC		=	$(MEMPATH)ft_memset.c\\$/;"	m
 SRC	libft/Makefile	/^SRC := $(filter $(addprefix %, .c), $(SRC))$/;"	m
 SRC	libft/minilibx/Makefile	/^SRC= mlx_shaders.c mlx_new_window.m mlx_init_loop.m mlx_new_image.m mlx_xpm.c mlx_int_str_to_wordtab.c$/;"	m
@@ -212,10 +221,12 @@ ft_colornew	libft/srcs/gfx/ft_colornew.c	/^t_color			*ft_colornew(unsigned char 
 ft_colorparse	libft/srcs/gfx/ft_colorparse.c	/^t_color		*ft_colorparse(char *arg)$/;"	f
 ft_colortohex	libft/srcs/gfx/ft_colortohex.c	/^int			ft_colortohex(t_color *col)$/;"	f
 ft_create_file	libft/srcs/fd/ft_create_file.c	/^size_t		ft_create_file(t_fd *fd, int chmod)$/;"	f
+ft_error_arg	srcs/ft_ls.c	/^void		ft_error_arg(char arg)$/;"	f
 ft_fd_delete	libft/srcs/fd/ft_fd_delete.c	/^void		ft_fd_delete(t_fd *fd)$/;"	f
 ft_flipcolumn	libft/srcs/tab/ft_v_flip.c	/^static void	ft_flipcolumn(void **array, size_t column, size_t rows,\\$/;"	f	file:
 ft_fliprow	libft/srcs/tab/ft_h_flip.c	/^static void	ft_fliprow(void *row, size_t columns, size_t nbytes)$/;"	f	file:
 ft_ftoa	libft/srcs/stdlib/ft_ftoa.c	/^char		*ft_ftoa(float f)$/;"	f
+ft_get_arg	srcs/ft_ls.c	/^void		ft_get_arg(t_arg *arg, char *curr_arg)$/;"	f
 ft_getnbr	libft/srcs/int/ft_getnbr.c	/^int		ft_getnbr(char *str)$/;"	f
 ft_h_flip	libft/srcs/tab/ft_h_flip.c	/^void		ft_h_flip(void **array, size_t columns, size_t rows, size_t nbytes)$/;"	f
 ft_hash	libft/srcs/rand/ft_hash.c	/^unsigned long		ft_hash(unsigned char *str)$/;"	f
@@ -243,6 +254,7 @@ ft_itoa	libft/srcs/stdlib/ft_itoa.c	/^char			*ft_itoa(int n)$/;"	f
 ft_letters	libft/srcs/str/ft_strsplit.c	/^static unsigned int		ft_letters(char const *s, char c, int i)$/;"	f	file:
 ft_lines	libft/srcs/str/ft_strsplit.c	/^static unsigned int		ft_lines(char const *s, char c)$/;"	f	file:
 ft_lstadd	libft/srcs/list/ft_lstadd.c	/^void	ft_lstadd(t_list **alst, t_list *new)$/;"	f
+ft_lstaddback	libft/srcs/list/ft_lstaddback.c	/^void		ft_lstaddback(t_list **alst, t_list *new)$/;"	f
 ft_lstaddend	libft/srcs/list/ft_lstaddend.c	/^void	ft_lstaddend(t_list **alst, t_list *new)$/;"	f
 ft_lstdel	libft/srcs/list/ft_lstdel.c	/^void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))$/;"	f
 ft_lstdelone	libft/srcs/list/ft_lstdelone.c	/^void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))$/;"	f
@@ -251,6 +263,7 @@ ft_lstiter	libft/srcs/list/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)
 ft_lstlen	libft/srcs/list/ft_lstlen.c	/^int		ft_lstlen(t_list *lst)$/;"	f
 ft_lstmap	libft/srcs/list/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))$/;"	f
 ft_lstnew	libft/srcs/list/ft_lstnew.c	/^t_list		*ft_lstnew(void const *content, size_t content_size)$/;"	f
+ft_lstpushback	libft/srcs/list/ft_lstpushback.c	/^t_list		*ft_lstpushback(t_list **alst, void *data, size_t content_size)$/;"	f
 ft_lsttoarray	libft/srcs/list/ft_lsttoarray.c	/^void	**ft_lsttoarray(t_list *lst)$/;"	f
 ft_matrixadd	libft/srcs/gfx/ft_matrixadd.c	/^void		ft_matrixadd(double **mat, double **m, double **n, int size)$/;"	f
 ft_matrixhomothety	libft/srcs/gfx/ft_matrixhomothety.c	/^void		ft_matrixhomothety(double **mat, int factor)$/;"	f
@@ -279,6 +292,7 @@ ft_mlx_keytonumchar	libft/srcs/gfx/ft_mlx_keytonumchar.c	/^char		ft_mlx_keytonum
 ft_mlx_printkeytochar	libft/srcs/gfx/ft_mlx_printkeytochar.c	/^char		ft_mlx_printkeytochar(int keycode)$/;"	f
 ft_mlxdelete	libft/srcs/gfx/ft_mlxdelete.c	/^void		ft_mlxdelete(t_mlx *mlx, t_img *img)$/;"	f
 ft_open	libft/srcs/fd/ft_open.c	/^size_t		ft_open(t_fd *fd, int flags, int rights)$/;"	f
+ft_parse_arg	srcs/ft_ls.c	/^void		ft_parse_arg(int argc, char **argv, t_arg *arg, t_list **lst)$/;"	f
 ft_pixcpy	libft/srcs/gfx/ft_pixcpy.c	/^void		ft_pixcpy(t_pix *pix_from, t_pix *pix_to)$/;"	f
 ft_pixnew	libft/srcs/gfx/ft_pixnew.c	/^t_pix		*ft_pixnew(int x, int y, int z)$/;"	f
 ft_pixpopulate	libft/srcs/gfx/ft_pixpopulate.c	/^void	ft_pixpopulate(t_pix *to_pix, int x, int y, int z)$/;"	f
@@ -327,6 +341,7 @@ ft_strnequ	libft/srcs/str/ft_strnequ.c	/^int		ft_strnequ(char const *s1, char co
 ft_strnew	libft/srcs/str/ft_strnew.c	/^char	*ft_strnew(size_t size)$/;"	f
 ft_strnjoin	libft/srcs/str/ft_strnjoin.c	/^char		*ft_strnjoin(char const *s1, char const *s2, size_t len)$/;"	f
 ft_strnstr	libft/srcs/str/ft_strnstr.c	/^char		*ft_strnstr(const char *str, const char *tofind, size_t n)$/;"	f
+ft_stroneof	libft/srcs/str/ft_stroneof.c	/^int		ft_stroneof(char c, char *str)$/;"	f
 ft_strrchr	libft/srcs/str/ft_strrchr.c	/^char	*ft_strrchr(const char *str, int c)$/;"	f
 ft_strsplit	libft/srcs/str/ft_strsplit.c	/^char					**ft_strsplit(char const *s, char c)$/;"	f
 ft_strstr	libft/srcs/str/ft_strstr.c	/^char		*ft_strstr(const char *str, const char *tofind)$/;"	f
@@ -394,7 +409,7 @@ loc_pixel_winhalfsize	libft/minilibx/mlx_int.h	/^  GLint		loc_pixel_winhalfsize;
 loop_hook	libft/minilibx/mlx_int.h	/^  void			(*loop_hook)(void *);$/;"	m	struct:mlx_ptr_s
 loop_hook_data	libft/minilibx/mlx_int.h	/^  void			*loop_hook_data;$/;"	m	struct:mlx_ptr_s
 loop_timer	libft/minilibx/mlx_int.h	/^  void			*loop_timer;$/;"	m	struct:mlx_ptr_s
-main	srcs/ft_ls.c	/^int		main(int argc, char **argv)$/;"	f
+main	srcs/ft_ls.c	/^int			main(int argc, char **argv)$/;"	f
 main_loop_active	libft/minilibx/mlx_int.h	/^  int			main_loop_active;$/;"	m	struct:mlx_ptr_s
 maj	includes/ft_ls_struct.h	/^	int				maj;$/;"	m	struct:s_size
 min	includes/ft_ls_struct.h	/^	int				min;$/;"	m	struct:s_size

@@ -6,14 +6,15 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 14:29:44 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/18 15:52:10 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/18 16:52:27 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LS_STRUCT_H
 # define FT_LS_STRUCT_H
 
-# include "includes/ft_ls.h"
+# include <sys/stat.h>
+# include <sys/types.h>
 
 typedef struct		s_size
 {
