@@ -4,13 +4,20 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-ANSI_COLOR_BLUE	libft/includes/libft_define.h	/^# define ANSI_COLOR_BLUE	/;"	d
-ANSI_COLOR_CYAN	libft/includes/libft_define.h	/^# define ANSI_COLOR_CYAN	/;"	d
-ANSI_COLOR_GREEN	libft/includes/libft_define.h	/^# define ANSI_COLOR_GREEN	/;"	d
-ANSI_COLOR_MAGENTA	libft/includes/libft_define.h	/^# define ANSI_COLOR_MAGENTA	/;"	d
-ANSI_COLOR_RED	libft/includes/libft_define.h	/^# define ANSI_COLOR_RED	/;"	d
-ANSI_COLOR_RESET	libft/includes/libft_define.h	/^# define ANSI_COLOR_RESET	/;"	d
-ANSI_COLOR_YELLOW	libft/includes/libft_define.h	/^# define ANSI_COLOR_YELLOW	/;"	d
+ANSI_BLACK	libft/includes/libft_define.h	/^# define ANSI_BLACK	/;"	d
+ANSI_BLINK	libft/includes/libft_define.h	/^# define ANSI_BLINK	/;"	d
+ANSI_BLUE	libft/includes/libft_define.h	/^# define ANSI_BLUE	/;"	d
+ANSI_BOLD	libft/includes/libft_define.h	/^# define ANSI_BOLD	/;"	d
+ANSI_CYAN	libft/includes/libft_define.h	/^# define ANSI_CYAN	/;"	d
+ANSI_GREEN	libft/includes/libft_define.h	/^# define ANSI_GREEN	/;"	d
+ANSI_MAGENTA	libft/includes/libft_define.h	/^# define ANSI_MAGENTA	/;"	d
+ANSI_MATRIX	libft/includes/libft_define.h	/^# define ANSI_MATRIX	/;"	d
+ANSI_NORMAL	libft/includes/libft_define.h	/^# define ANSI_NORMAL	/;"	d
+ANSI_RED	libft/includes/libft_define.h	/^# define ANSI_RED	/;"	d
+ANSI_RESET	libft/includes/libft_define.h	/^# define ANSI_RESET	/;"	d
+ANSI_UNDERLINED	libft/includes/libft_define.h	/^# define ANSI_UNDERLINED	/;"	d
+ANSI_WHITE	libft/includes/libft_define.h	/^# define ANSI_WHITE	/;"	d
+ANSI_YELLOW	libft/includes/libft_define.h	/^# define ANSI_YELLOW	/;"	d
 ARGS	includes/ft_ls_define.h	/^# define ARGS /;"	d
 A_KEY	libft/includes/libft_define.h	/^# define A_KEY	/;"	d
 BUFF_SIZE	libft/includes/libft_define.h	/^# define BUFF_SIZE /;"	d
@@ -123,6 +130,7 @@ PROPERTYCHANGEMASK	libft/includes/libft_define.h	/^# define PROPERTYCHANGEMASK	/
 PUTPATH	libft/Makefile	/^PUTPATH = put\/$/;"	m
 P_KEY	libft/includes/libft_define.h	/^# define P_KEY	/;"	d
 Q_KEY	libft/includes/libft_define.h	/^# define Q_KEY	/;"	d
+R	includes/ft_ls_struct.h	/^	int				R;$/;"	m	struct:s_arg
 RANDPATH	libft/Makefile	/^RANDPATH = rand\/$/;"	m
 READ_EOF	libft/includes/libft_define.h	/^# define READ_EOF	/;"	d
 READ_ERR	libft/includes/libft_define.h	/^# define READ_ERR	/;"	d
@@ -183,7 +191,6 @@ date	includes/ft_ls_struct.h	/^	time_t			date;$/;"	m	struct:s_ls
 dev_id	includes/ft_ls_struct.h	/^	dev_t			dev_id;$/;"	m	struct:s_ls
 display_log	libft/minilibx/mlx_shaders.c	/^void display_log(GLuint object, void (*param_func)(), void (*getlog_func)())$/;"	f
 endian	libft/includes/libft_struct.h	/^	int				endian;$/;"	m	struct:s_img
-f	includes/ft_ls_struct.h	/^	int				f;$/;"	m	struct:s_arg
 fd	libft/includes/libft_struct.h	/^	int				fd;$/;"	m	struct:s_fd
 flags	libft/includes/libft_struct.h	/^	int				flags;$/;"	m	struct:s_fd
 font	libft/minilibx/mlx_int.h	/^  mlx_img_list_t	*font;$/;"	m	struct:mlx_ptr_s
@@ -191,6 +198,7 @@ font_atlas	libft/minilibx/font.c	/^} font_atlas = {$/;"	v	typeref:struct:__anon1
 font_fshader	libft/minilibx/mlx_int.h	/^  GLuint	font_fshader;$/;"	m	struct:glsl_info_s
 font_program	libft/minilibx/mlx_int.h	/^  GLuint	font_program;$/;"	m	struct:glsl_info_s
 font_vshader	libft/minilibx/mlx_int.h	/^  GLuint	font_vshader;$/;"	m	struct:glsl_info_s
+ft_abs	libft/srcs/math/ft_abs.c	/^int		ft_abs(int a)$/;"	f
 ft_atoi	libft/srcs/stdlib/ft_atoi.c	/^int		ft_atoi(const char *str)$/;"	f
 ft_bzero	libft/srcs/mem/ft_bzero.c	/^void		ft_bzero(void *s, size_t n)$/;"	f
 ft_bzerotab	libft/srcs/mem/ft_bzerotab.c	/^void		ft_bzerotab(void **tab)$/;"	f
@@ -317,6 +325,7 @@ ft_strncmp	libft/srcs/str/ft_strncmp.c	/^size_t		ft_strncmp(const char *s1, cons
 ft_strncpy	libft/srcs/str/ft_strncpy.c	/^char	*ft_strncpy(char *dest, const char *src, size_t n)$/;"	f
 ft_strnequ	libft/srcs/str/ft_strnequ.c	/^int		ft_strnequ(char const *s1, char const *s2, size_t n)$/;"	f
 ft_strnew	libft/srcs/str/ft_strnew.c	/^char	*ft_strnew(size_t size)$/;"	f
+ft_strnjoin	libft/srcs/str/ft_strnjoin.c	/^char		*ft_strnjoin(char const *s1, char const *s2, size_t len)$/;"	f
 ft_strnstr	libft/srcs/str/ft_strnstr.c	/^char		*ft_strnstr(const char *str, const char *tofind, size_t n)$/;"	f
 ft_strrchr	libft/srcs/str/ft_strrchr.c	/^char	*ft_strrchr(const char *str, int c)$/;"	f
 ft_strsplit	libft/srcs/str/ft_strsplit.c	/^char					**ft_strsplit(char const *s, char c)$/;"	f
@@ -344,7 +353,6 @@ ft_vec3new	libft/srcs/gfx/ft_vec3new.c	/^t_vec3		*ft_vec3new(double x, double y,
 ft_vec3populate	libft/srcs/gfx/ft_vec3populate.c	/^void		ft_vec3populate(t_vec3 *to_vec3, double x, double y, double z)$/;"	f
 ft_xmpnew	libft/srcs/gfx/ft_xmpnew.c	/^t_img			*ft_xmpnew(void *mlx, char *xmp, size_t x, size_t y)$/;"	f
 func_t	libft/minilibx/mlx_int.h	/^typedef int (*func_t)();$/;"	t
-g	includes/ft_ls_struct.h	/^	int				g;$/;"	m	struct:s_arg
 g	libft/includes/libft_struct.h	/^	unsigned char	g;$/;"	m	struct:s_color
 get_line	libft/srcs/perso/get_next_line.c	/^static int			get_line(t_str *buffer, int *num_char)$/;"	f	file:
 get_next_line	libft/srcs/perso/get_next_line.c	/^int					get_next_line(const int fd, char **line)$/;"	f
@@ -386,6 +394,7 @@ loc_pixel_winhalfsize	libft/minilibx/mlx_int.h	/^  GLint		loc_pixel_winhalfsize;
 loop_hook	libft/minilibx/mlx_int.h	/^  void			(*loop_hook)(void *);$/;"	m	struct:mlx_ptr_s
 loop_hook_data	libft/minilibx/mlx_int.h	/^  void			*loop_hook_data;$/;"	m	struct:mlx_ptr_s
 loop_timer	libft/minilibx/mlx_int.h	/^  void			*loop_timer;$/;"	m	struct:mlx_ptr_s
+main	srcs/ft_ls.c	/^int		main(int argc, char **argv)$/;"	f
 main_loop_active	libft/minilibx/mlx_int.h	/^  int			main_loop_active;$/;"	m	struct:mlx_ptr_s
 maj	includes/ft_ls_struct.h	/^	int				maj;$/;"	m	struct:s_size
 min	includes/ft_ls_struct.h	/^	int				min;$/;"	m	struct:s_size
@@ -421,6 +430,7 @@ name	libft/includes/libft_struct.h	/^	char			*name;$/;"	m	struct:s_fd
 name	libft/minilibx/mlx_xpm.c	/^  char  *name;$/;"	m	struct:s_col_name	file:
 name	libft/minilibx/mlx_xpm.c	/^  int           name;$/;"	m	struct:s_xpm_col	file:
 nb_flush	libft/minilibx/mlx_int.h	/^  int			nb_flush;$/;"	m	struct:mlx_win_list_s
+next	includes/ft_ls_struct.h	/^	struct s_ls		*next;$/;"	m	struct:s_ls	typeref:struct:s_ls::s_ls
 next	libft/includes/libft_struct.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
 next	libft/includes/libft_struct.h	/^	struct s_str	*next;$/;"	m	struct:s_str	typeref:struct:s_str::s_str
 next	libft/minilibx/mlx_int.h	/^  struct mlx_img_ctx_s	*next;$/;"	m	struct:mlx_img_ctx_s	typeref:struct:mlx_img_ctx_s::mlx_img_ctx_s
@@ -473,9 +483,7 @@ t_vec3u	libft/includes/libft_struct.h	/^}					t_vec3u;$/;"	t	typeref:struct:s_ve
 t_xpm_col	libft/minilibx/mlx_xpm.c	/^} t_xpm_col;$/;"	t	typeref:struct:s_xpm_col	file:
 texture	libft/minilibx/mlx_int.h	/^  GLuint		texture;$/;"	m	struct:mlx_img_ctx_s
 total	includes/ft_ls_struct.h	/^	int				total;$/;"	m	struct:s_size
-u	includes/ft_ls_struct.h	/^	int				u;$/;"	m	struct:s_arg
 uid	includes/ft_ls_struct.h	/^	uid_t			uid;$/;"	m	struct:s_ls
-upper_r	includes/ft_ls_struct.h	/^	int				upper_r;$/;"	m	struct:s_arg
 userspace	includes/ft_ls_struct.h	/^	int				userspace;$/;"	m	struct:s_size
 vbuffer	libft/minilibx/mlx_int.h	/^  GLuint		vbuffer;$/;"	m	struct:mlx_img_ctx_s
 vertexes	libft/minilibx/mlx_int.h	/^  GLfloat		vertexes[8];$/;"	m	struct:mlx_img_list_s
