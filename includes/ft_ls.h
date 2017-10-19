@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 14:25:34 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/18 20:03:47 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/19 16:05:44 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,9 @@ int			ft_lsgetfilesindir(t_obj **files, struct dirent *file, \
 void		ft_lsgetfiles(t_obj **files, char *name, char *path, t_arg arg);
 void		ft_lsdisplay(t_arg arg, t_obj *files, int fileordir);
 t_obj		*ft_lsorganizeobjs(t_obj *list, t_arg arg);
+int			ft_namecmp(t_obj *obj1, t_obj *obj2);
+int			ft_timecmp(t_obj *obj1, t_obj *obj2);
+void		ft_lscpyobj(t_obj **objs, t_obj *to_cpy);
+void		ft_lsswapobj(t_obj **a, t_obj **b);
 
 #endif

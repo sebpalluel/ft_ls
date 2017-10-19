@@ -252,13 +252,17 @@ ft_itoa	libft/srcs/stdlib/ft_itoa.c	/^char			*ft_itoa(int n)$/;"	f
 ft_letters	libft/srcs/str/ft_strsplit.c	/^static unsigned int		ft_letters(char const *s, char c, int i)$/;"	f	file:
 ft_lines	libft/srcs/str/ft_strsplit.c	/^static unsigned int		ft_lines(char const *s, char c)$/;"	f	file:
 ft_ls_process	srcs/ft_ls_process.c	/^void		ft_ls_process(t_arg arg, t_list *lst, int end_dir)$/;"	f
+ft_lscpyobj	srcs/utils.c	/^void		ft_lscpyobj(t_obj **objs, t_obj *to_cpy)$/;"	f
 ft_lsdir	srcs/ft_ls_process.c	/^static void	ft_lsdir(t_arg arg, t_list *lst, int end_dir)$/;"	f	file:
 ft_lsdisplay	srcs/ft_lsoutput.c	/^void		ft_lsdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f
 ft_lsfile	srcs/ft_ls_process.c	/^static void	ft_lsfile(t_arg arg, t_list *lst)$/;"	f	file:
 ft_lsgetfiles	srcs/ft_lsgetinfo.c	/^void			ft_lsgetfiles(t_obj **files, char *name, char *path, t_arg arg)$/;"	f
 ft_lsgetfilesindir	srcs/ft_lsgetinfo.c	/^int				ft_lsgetfilesindir(t_obj **files, struct dirent *file, \\$/;"	f
 ft_lsinsidedirs	srcs/ft_ls_process.c	/^static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)$/;"	f	file:
-ft_lsorganizeobjs	srcs/ft_lsorganize.c	/^t_obj		*ft_lsorganizeobjs(t_obj *list, t_arg arg)$/;"	f
+ft_lsorderobjs	srcs/ft_lsorganize.c	/^static void	ft_lsorderobjs(t_obj **files, int (*f)(t_obj *obj1, t_obj *obj2))$/;"	f	file:
+ft_lsorganizeobjs	srcs/ft_lsorganize.c	/^t_obj		*ft_lsorganizeobjs(t_obj *files, t_arg arg)$/;"	f
+ft_lsreverseorderobjs	srcs/ft_lsorganize.c	/^void		ft_lsreverseorderobjs(t_obj **files)$/;"	f
+ft_lsswapobj	srcs/utils.c	/^void		ft_lsswapobj(t_obj **a, t_obj **b)$/;"	f
 ft_lstadd	libft/srcs/list/ft_lstadd.c	/^void	ft_lstadd(t_list **alst, t_list *new)$/;"	f
 ft_lstaddback	libft/srcs/list/ft_lstaddback.c	/^void		ft_lstaddback(t_list **alst, t_list *new)$/;"	f
 ft_lstaddend	libft/srcs/list/ft_lstaddend.c	/^void	ft_lstaddend(t_list **alst, t_list *new)$/;"	f
@@ -299,6 +303,7 @@ ft_mlx_keytoletterchar3	libft/srcs/gfx/ft_mlx_keytoletterchar.c	/^static char	ft
 ft_mlx_keytonumchar	libft/srcs/gfx/ft_mlx_keytonumchar.c	/^char		ft_mlx_keytonumchar(int keycode)$/;"	f
 ft_mlx_printkeytochar	libft/srcs/gfx/ft_mlx_printkeytochar.c	/^char		ft_mlx_printkeytochar(int keycode)$/;"	f
 ft_mlxdelete	libft/srcs/gfx/ft_mlxdelete.c	/^void		ft_mlxdelete(t_mlx *mlx, t_img *img)$/;"	f
+ft_namecmp	srcs/utils.c	/^int			ft_namecmp(t_obj *obj1, t_obj *obj2)$/;"	f
 ft_newobj	srcs/ft_lsgetinfo.c	/^static t_obj	*ft_newobj(char *name, char *path, t_arg arg)$/;"	f	file:
 ft_open	libft/srcs/fd/ft_open.c	/^size_t		ft_open(t_fd *fd, int flags, int rights)$/;"	f
 ft_parse_arg	srcs/ft_ls.c	/^static void	ft_parse_arg(int argc, char **argv, t_arg *arg, t_list **lst)$/;"	f	file:
@@ -370,6 +375,7 @@ ft_tabnewsize_t	libft/srcs/tab/ft_tabnew.c	/^size_t	**ft_tabnewsize_t(size_t wid
 ft_tabnewsize_t	libft/srcs/tab/ft_tabnewsize_t.c	/^size_t		**ft_tabnewsize_t(size_t width, size_t height)$/;"	f
 ft_tabnewstr	libft/srcs/tab/ft_tabnewstr.c	/^char	**ft_tabnewstr(size_t width, size_t height)$/;"	f
 ft_tabstrcpy	libft/srcs/tab/ft_tabstrcpy.c	/^char		**ft_tabstrcpy(char **str)$/;"	f
+ft_timecmp	srcs/utils.c	/^int			ft_timecmp(t_obj *obj1, t_obj *obj2)$/;"	f
 ft_tolower	libft/srcs/str/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
 ft_toupper	libft/srcs/str/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
 ft_v_flip	libft/srcs/tab/ft_v_flip.c	/^void		ft_v_flip(void **array, size_t columns, size_t rows, size_t nbytes)$/;"	f
