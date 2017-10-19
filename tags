@@ -214,6 +214,7 @@ ft_checkhexa	libft/srcs/ctype/ft_checkhexa.c	/^int					ft_checkhexa(char *str)$/
 ft_checkint	libft/srcs/ctype/ft_checkint.c	/^int			ft_checkint(char *str)$/;"	f
 ft_close	libft/srcs/fd/ft_close.c	/^int	ft_close(t_fd *fd)$/;"	f
 ft_color	libft/srcs/gfx/ft_color.c	/^void	ft_color(t_color *clr, \\$/;"	f
+ft_color_mode	srcs/utils.c	/^void	ft_color_mode(mode_t mode)$/;"	f
 ft_colorcpy	libft/srcs/gfx/ft_colorcpy.c	/^void	ft_colorcpy(t_color *clr_from, t_color *clr_to)$/;"	f
 ft_colornew	libft/srcs/gfx/ft_colornew.c	/^t_color			*ft_colornew(unsigned char r, unsigned char g, \\$/;"	f
 ft_colorparse	libft/srcs/gfx/ft_colorparse.c	/^t_color		*ft_colorparse(char *arg)$/;"	f
@@ -252,6 +253,7 @@ ft_itoa	libft/srcs/stdlib/ft_itoa.c	/^char			*ft_itoa(int n)$/;"	f
 ft_letters	libft/srcs/str/ft_strsplit.c	/^static unsigned int		ft_letters(char const *s, char c, int i)$/;"	f	file:
 ft_lines	libft/srcs/str/ft_strsplit.c	/^static unsigned int		ft_lines(char const *s, char c)$/;"	f	file:
 ft_ls_process	srcs/ft_ls_process.c	/^void		ft_ls_process(t_arg arg, t_list *lst, int end_dir)$/;"	f
+ft_lsbasicdisplay	srcs/ft_lsoutput.c	/^void	ft_lsbasicdisplay(t_arg arg, t_obj *files)$/;"	f
 ft_lscpyobj	srcs/utils.c	/^void		ft_lscpyobj(t_obj **objs, t_obj *to_cpy)$/;"	f
 ft_lsdir	srcs/ft_ls_process.c	/^static void	ft_lsdir(t_arg arg, t_list *lst, int end_dir)$/;"	f	file:
 ft_lsdisplay	srcs/ft_lsoutput.c	/^void		ft_lsdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f
