@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:51:05 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/19 21:00:23 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/19 22:34:19 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@
 //	ft_putstr(C_NONE);
 //}
 
-void	ft_lslongdisplay(t_arg arg, t_obj *files, int fileordir)
+void			ft_lslongdisplay(t_arg arg, t_obj *files, int fileordir)
 {
-	t_obj	*current;
+	t_obj		*current;
 	t_disp_size	size;
 
 	current = files;
@@ -58,9 +58,9 @@ void	ft_lslongdisplay(t_arg arg, t_obj *files, int fileordir)
 	}
 }
 
-void	ft_lsbasicdisplay(t_arg arg, t_obj *files)
+void			ft_lsbasicdisplay(t_arg arg, t_obj *files)
 {
-	t_obj	*current;
+	t_obj		*current;
 
 	current = files;
 	while (current)
@@ -75,9 +75,9 @@ void	ft_lsbasicdisplay(t_arg arg, t_obj *files)
 	}
 }
 
-void		ft_lsdisplay(t_arg arg, t_obj *files, int fileordir)
+void			ft_lsdisplay(t_arg arg, t_obj *files, int fileordir)
 {
-	t_obj	*current;
+	t_obj		*current;
 
 	current = files;
 	current = ft_lsorganizeobjs(current, arg);

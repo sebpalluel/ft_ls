@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2017/01/09 14:05:27 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/10/19 18:19:43 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/10/19 21:43:21 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -68,3 +68,4 @@ re : fclean all
 debug : lib $(NAME) debug_compil
 
 .PHONY: $(NAME) all clean fclean re
+

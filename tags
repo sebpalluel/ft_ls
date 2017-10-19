@@ -48,6 +48,7 @@ CTYPEPATH	libft/Makefile	/^CTYPEPATH = ctype\/$/;"	m
 C_KEY	libft/includes/libft_define.h	/^# define C_KEY	/;"	d
 DATE	includes/ft_ls_define.h	/^# define DATE /;"	d
 DEBUG	Makefile	/^DEBUG		=	-g3 -fsanitize=address$/;"	m
+DEBUG	libft/Makefile	/^DEBUG	=	-g3 -fsanitize=address$/;"	m
 DOT_KEY	libft/includes/libft_define.h	/^# define DOT_KEY	/;"	d
 DOWN	libft/includes/libft_define.h	/^# define DOWN	/;"	d
 D_KEY	libft/includes/libft_define.h	/^# define D_KEY	/;"	d
@@ -66,7 +67,7 @@ FD_MAX	libft/includes/libft_define.h	/^# define FD_MAX	/;"	d
 FILENAMEMAXLEN	includes/ft_ls_define.h	/^# define FILENAMEMAXLEN /;"	d
 FIVE	libft/includes/libft_define.h	/^# define FIVE	/;"	d
 FLAGS	Makefile	/^FLAGS		=	-Wall -Wextra -Werror -lpthread $/;"	m
-FLAGS	libft/Makefile	/^FLAGS	=	-ggdb -Wall -Wextra -Werror$/;"	m
+FLAGS	libft/Makefile	/^FLAGS	=	-g3 -Wall -Wextra -Werror$/;"	m
 FOCUSCHANGEMASK	libft/includes/libft_define.h	/^# define FOCUSCHANGEMASK	/;"	d
 FONT_HEIGHT	libft/minilibx/mlx_int.h	/^#define	FONT_HEIGHT	/;"	d
 FONT_WIDTH	libft/minilibx/mlx_int.h	/^#define FONT_WIDTH	/;"	d
@@ -261,17 +262,17 @@ ft_itoa	libft/srcs/stdlib/ft_itoa.c	/^char			*ft_itoa(int n)$/;"	f
 ft_letters	libft/srcs/str/ft_strsplit.c	/^static unsigned int		ft_letters(char const *s, char c, int i)$/;"	f	file:
 ft_lines	libft/srcs/str/ft_strsplit.c	/^static unsigned int		ft_lines(char const *s, char c)$/;"	f	file:
 ft_ls_process	srcs/ft_ls_process.c	/^void		ft_ls_process(t_arg arg, t_list *lst, int end_dir)$/;"	f
-ft_lsbasicdisplay	srcs/ft_lsoutput.c	/^void	ft_lsbasicdisplay(t_arg arg, t_obj *files)$/;"	f
+ft_lsbasicdisplay	srcs/ft_lsoutput.c	/^void			ft_lsbasicdisplay(t_arg arg, t_obj *files)$/;"	f
 ft_lscpyobj	srcs/utils.c	/^void		ft_lscpyobj(t_obj **objs, t_obj *to_cpy)$/;"	f
 ft_lsdir	srcs/ft_ls_process.c	/^static void	ft_lsdir(t_arg arg, t_list *lst, int end_dir)$/;"	f	file:
 ft_lsdisp_usrgrp_size	srcs/ft_lslongsize.c	/^void				ft_lsdisp_usrgrp_size(t_disp_size *size, t_obj *current)$/;"	f
-ft_lsdisplay	srcs/ft_lsoutput.c	/^void		ft_lsdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f
+ft_lsdisplay	srcs/ft_lsoutput.c	/^void			ft_lsdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f
 ft_lsdispsize	srcs/ft_lslongsize.c	/^void				ft_lsdispsize(t_disp_size *size, t_obj *current)$/;"	f
 ft_lsfile	srcs/ft_ls_process.c	/^static void	ft_lsfile(t_arg arg, t_list *lst)$/;"	f	file:
 ft_lsgetfiles	srcs/ft_lsgetinfo.c	/^void			ft_lsgetfiles(t_obj **files, char *name, char *path, t_arg arg)$/;"	f
 ft_lsgetfilesindir	srcs/ft_lsgetinfo.c	/^int				ft_lsgetfilesindir(t_obj **files, struct dirent *file, \\$/;"	f
 ft_lsinsidedirs	srcs/ft_ls_process.c	/^static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)$/;"	f	file:
-ft_lslongdisplay	srcs/ft_lsoutput.c	/^void	ft_lslongdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f
+ft_lslongdisplay	srcs/ft_lsoutput.c	/^void			ft_lslongdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f
 ft_lslongsize	srcs/ft_lslongsize.c	/^t_disp_size			ft_lslongsize(t_arg arg, t_obj *files)$/;"	f
 ft_lsorderobjs	srcs/ft_lsorganize.c	/^static void	ft_lsorderobjs(t_obj **files, int (*f)(t_obj *obj1, t_obj *obj2))$/;"	f	file:
 ft_lsorganizeobjs	srcs/ft_lsorganize.c	/^t_obj		*ft_lsorganizeobjs(t_obj *files, t_arg arg)$/;"	f

@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/19 18:10:39 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/19 20:59:20 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/19 22:49:36 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,19 @@ void				ft_lsdisp_usrgrp_size(t_disp_size *size, t_obj *current)
 	struct group 	*grp;
 
 	pws = getpwuid(current->st_uid) ? getpwuid(current->st_uid) : NULL;
-	if (pws)
+	if (pws != NULL)
 	{
 		size->usrspace = ft_get_max_size(ft_strlen(pws->pw_name), \
 				size->usrspace);
-		free(pws);
 	}
 	else
 		size->usrspace = ft_get_max_size(ft_intlen(current->st_uid), \
 				size->usrspace);
 	grp = getgrgid(current->st_gid) ? getgrgid(current->st_gid) : NULL;
-	if (grp)
+	if (grp != NULL)
 	{
 		size->grpspace = ft_get_max_size(ft_strlen(grp->gr_name), \
 				size->grpspace);
-		free(grp);
 	}
 	else
 		size->grpspace = ft_get_max_size(ft_intlen(current->st_gid), \

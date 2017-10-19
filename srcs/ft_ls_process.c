@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:56:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/19 15:12:42 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/19 22:33:31 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ void		ft_ls_process(t_arg arg, t_list *lst, int end_dir)
 	file = NULL;
 	directory = NULL;
 	current = lst;
+	//printf("content %s\n", current->content);
 	while (current)
 	{
 		if ((dir = opendir(current->content)) == NULL)
