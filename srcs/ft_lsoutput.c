@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:51:05 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/19 17:51:57 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/19 21:00:23 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,27 +36,27 @@
 //	ft_putendl(cur->name);
 //	ft_putstr(C_NONE);
 //}
-//
-//void	ft_lslongdisplay(t_arg arg, t_obj *files, int fileordir)
-//{
-//	t_obj	*cur;
-//	t_size	size;
-//
-//	cur = files;
-//	size = get_size(arg, files);
-//	if (fileordir)
-//	{
-//		ft_putstr("total ");
-//		ft_putnbr(size.total);
-//		ft_putchar('\n');
-//	}
-//	while (cur)
-//	{
-//		if (!(arg.a == 0 && cur->name[0] == '.'))
-//			ft_lslongdisplayfile(arg, cur, size);
-//		cur = cur->next;
-//	}
-//}
+
+void	ft_lslongdisplay(t_arg arg, t_obj *files, int fileordir)
+{
+	t_obj	*current;
+	t_disp_size	size;
+
+	current = files;
+	size = ft_lslongsize(arg, files);
+	if (fileordir)
+	{
+		ft_putstr("total ");
+		ft_putnbr(size.total);
+		ft_putchar('\n');
+	}
+	while (current)
+	{
+		//if (!(arg.a == 0 && current->name[0] == '.'))
+		//	ft_lslongdisplayfile(arg, current, size);
+		current = current->next;
+	}
+}
 
 void	ft_lsbasicdisplay(t_arg arg, t_obj *files)
 {
@@ -81,9 +81,8 @@ void		ft_lsdisplay(t_arg arg, t_obj *files, int fileordir)
 
 	current = files;
 	current = ft_lsorganizeobjs(current, arg);
-	//(arg.l == 1) ? ft_lslongdisplay(arg, current, fileordir) : \
-	//		ft_lsbasicdisplay(arg, current);
+	(arg.l == 1) ? ft_lslongdisplay(arg, current, fileordir) : \
+			ft_lsbasicdisplay(arg, current);
 	//arg.R == 1 ? recursion(arg, current) : NULL;
 	fileordir = 0;
-	ft_lsbasicdisplay(arg, current);
 }

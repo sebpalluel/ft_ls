@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 14:29:44 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/18 19:37:34 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/19 19:34:58 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@
 # include <sys/stat.h>
 # include <sys/types.h>
 
-typedef struct		s_size
+typedef struct		s_disp_size
 {
 	int				total;
 	int				size;
-	int				groupspace;
-	int				userspace;
-	int				linkspace;
+	int				grpspace;
+	int				usrspace;
+	int				lnkspace;
 	int				min;
 	int				maj;
-}					t_size;
+}					t_disp_size;
 
 typedef struct		s_arg
 {
