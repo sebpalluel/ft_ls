@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2017/01/09 14:05:27 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/10/19 21:43:21 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/10/19 22:54:42 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -18,6 +18,7 @@ SRC 		=	srcs/ft_ls.c \
 				srcs/ft_lsoutput.c \
 				srcs/ft_lsgetinfo.c \
 				srcs/ft_lslongsize.c \
+				srcs/ft_lsprint.c \
 				srcs/utils.c \
 
 EXT			=	Makefile

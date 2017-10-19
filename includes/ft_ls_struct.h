@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 14:29:44 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/19 19:34:58 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/19 23:52:22 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ typedef struct		s_arg
 	int				r;
 	int				t;
 	int				u;
+	int				g;
 }					t_arg;
 
 typedef struct		s_obj

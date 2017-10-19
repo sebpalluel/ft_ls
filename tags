@@ -273,9 +273,15 @@ ft_lsgetfiles	srcs/ft_lsgetinfo.c	/^void			ft_lsgetfiles(t_obj **files, char *na
 ft_lsgetfilesindir	srcs/ft_lsgetinfo.c	/^int				ft_lsgetfilesindir(t_obj **files, struct dirent *file, \\$/;"	f
 ft_lsinsidedirs	srcs/ft_ls_process.c	/^static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)$/;"	f	file:
 ft_lslongdisplay	srcs/ft_lsoutput.c	/^void			ft_lslongdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f
+ft_lslongdisplayfile	srcs/ft_lsoutput.c	/^void	ft_lslongdisplayfile(t_arg arg, t_obj *current, t_disp_size size)$/;"	f
 ft_lslongsize	srcs/ft_lslongsize.c	/^t_disp_size			ft_lslongsize(t_arg arg, t_obj *files)$/;"	f
 ft_lsorderobjs	srcs/ft_lsorganize.c	/^static void	ft_lsorderobjs(t_obj **files, int (*f)(t_obj *obj1, t_obj *obj2))$/;"	f	file:
 ft_lsorganizeobjs	srcs/ft_lsorganize.c	/^t_obj		*ft_lsorganizeobjs(t_obj *files, t_arg arg)$/;"	f
+ft_lsprintchmod	srcs/ft_lsprint.c	/^void		ft_lsprintchmod(t_obj *obj)$/;"	f
+ft_lsprintfilemode	srcs/ft_lsprint.c	/^void		ft_lsprintfilemode(t_obj *obj)$/;"	f
+ft_lsprintint	srcs/ft_lsprint.c	/^void		ft_lsprintint(int nlink, int space)$/;"	f
+ft_lsprintmajmin	srcs/ft_lsprint.c	/^void		ft_lsprintmajmin(t_obj *file, t_disp_size size)$/;"	f
+ft_lsprintstr	srcs/ft_lsprint.c	/^void		ft_lsprintstr(char *str, int space)$/;"	f
 ft_lsreverseorderobjs	srcs/ft_lsorganize.c	/^void		ft_lsreverseorderobjs(t_obj **files)$/;"	f
 ft_lsswapobj	srcs/utils.c	/^void		ft_lsswapobj(t_obj **a, t_obj **b)$/;"	f
 ft_lstadd	libft/srcs/list/ft_lstadd.c	/^void	ft_lstadd(t_list **alst, t_list *new)$/;"	f
@@ -399,6 +405,7 @@ ft_vec3new	libft/srcs/gfx/ft_vec3new.c	/^t_vec3		*ft_vec3new(double x, double y,
 ft_vec3populate	libft/srcs/gfx/ft_vec3populate.c	/^void		ft_vec3populate(t_vec3 *to_vec3, double x, double y, double z)$/;"	f
 ft_xmpnew	libft/srcs/gfx/ft_xmpnew.c	/^t_img			*ft_xmpnew(void *mlx, char *xmp, size_t x, size_t y)$/;"	f
 func_t	libft/minilibx/mlx_int.h	/^typedef int (*func_t)();$/;"	t
+g	includes/ft_ls_struct.h	/^	int				g;$/;"	m	struct:s_arg
 g	libft/includes/libft_struct.h	/^	unsigned char	g;$/;"	m	struct:s_color
 get_line	libft/srcs/perso/get_next_line.c	/^static int			get_line(t_str *buffer, int *num_char)$/;"	f	file:
 get_next_line	libft/srcs/perso/get_next_line.c	/^int					get_next_line(const int fd, char **line)$/;"	f
