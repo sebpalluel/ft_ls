@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 14:25:34 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/19 23:34:01 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 00:54:27 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <grp.h>
 # include <dirent.h>
 
-void		ft_ls_process(t_arg arg, t_list *lst, int end_dir);
+void		ft_lsprocess(t_arg arg, t_list *list, int end_dir);
 int			ft_lsgetfilesindir(t_obj **files, struct dirent *file, \
 		char *path, t_arg arg);
 void		ft_lsgetfiles(t_obj **files, char *name, char *path, t_arg arg);

@@ -6,13 +6,40 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:51:05 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/19 23:54:25 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 01:19:28 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/ft_ls.h"
 
-void	ft_lslongdisplayfile(t_arg arg, t_obj *current, t_disp_size size)
+static void		ft_lsdisplaytime(time_t date)
+{
+	char		*base_time;
+	char		*file_time;
+	char		*final_time;
+	char		*tmp;
+	long int	current_time;
+
+	current_time = time(0);
+	file_time = ft_strdup(ctime(&date));
+	base_time = ft_strsub(file_time, 4, 6);
+	if ((date> current_time) || (date < (current_time - 15724800)))
+	{
+		base_time = ft_strjoin(base_time, " ");
+		tmp = ft_strsub(file_time, 19, 5);
+	}
+	else
+		tmp = ft_strsub(file_time, 10, 6);
+	ft_putstr(final_time = ft_strjoin(base_time, tmp));
+	ft_putchar(' ');
+	free(final_time);
+	free(file_time);
+	free(base_time);
+	free(tmp);
+}
+
+void			ft_lslongdisplayfile(t_arg arg, t_obj *current, \
+		t_disp_size size)
 {
 	ft_lsprintfilemode(current);
 	ft_lsprintchmod(current);
@@ -32,7 +59,7 @@ void	ft_lslongdisplayfile(t_arg arg, t_obj *current, t_disp_size size)
 		ft_lsprintmajmin(current, size);
 	else
 		ft_lsprintint(current->st_size, size.size);
-	display_date(current->date);
+	ft_lsdisplaytime(current->date);
 	ft_color_mode(current->st_mode);
 	ft_putendl(current->name);
 	ft_putstr(ANSI_RESET);

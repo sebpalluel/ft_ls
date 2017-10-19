@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ls_process.c                                    :+:      :+:    :+:   */
+/*   ft_lsprocess.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:56:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/19 22:33:31 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 01:35:23 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,12 @@ static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)
 	}
 }
 
-static void	ft_lsdir(t_arg arg, t_list *lst, int end_dir)
+static void	ft_lsdir(t_arg arg, t_list *list, int end_dir)
 {
 	t_list	*current;
 	t_obj	*dirs;
 
-	current = lst;
+	current = list;
 	dirs = NULL;
 	while (current)
 	{
@@ -55,14 +55,13 @@ static void	ft_lsdir(t_arg arg, t_list *lst, int end_dir)
 	ft_lsinsidedirs(arg, dirs, end_dir);
 }
 
-static void	ft_lsfile(t_arg arg, t_list *lst)
+static void	ft_lsfile(t_arg arg, t_list *list)
 {
 	t_list	*current;
 	t_obj	*files;
 
-	current = lst;
+	current = list;
 	files = NULL;
-	arg.a = 1; // why all ?
 	while (current)
 	{
 		ft_lsgetfiles(&files, current->content, "", arg);
@@ -72,7 +71,7 @@ static void	ft_lsfile(t_arg arg, t_list *lst)
 		ft_lsdisplay(arg, files, 0);
 }
 
-void		ft_ls_process(t_arg arg, t_list *lst, int end_dir)
+void		ft_lsprocess(t_arg arg, t_list *list, int end_dir)
 {
 	DIR		*dir;
 	t_list	*file;
@@ -81,8 +80,7 @@ void		ft_ls_process(t_arg arg, t_list *lst, int end_dir)
 
 	file = NULL;
 	directory = NULL;
-	current = lst;
-	//printf("content %s\n", current->content);
+	current = list;
 	while (current)
 	{
 		if ((dir = opendir(current->content)) == NULL)
