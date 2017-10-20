@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 14:34:09 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 15:51:38 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 16:07:41 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,9 @@ void			ft_lsdelpath(void *path, size_t size)
 	free(path);
 }
 
-
+void			ft_lsdelobj(t_obj *obj, size_t size)
+{
+	(void)size;
+	printf("obj->path : %s\n", (char*)obj->path);
+	free(obj->path);
+}
