@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 15:37:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 15:50:41 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 18:15:19 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static void		ft_get_arg(t_arg *arg, char *curr_arg)
 	i = 0;
 	while (curr_arg[++i])
 	{
-		if (ft_stroneof(curr_arg[i], "1lRartug") != ERROR || \
+		if (ft_stroneof(curr_arg[i], LSFLAGS) != ERROR || \
 				(curr_arg[1] == '-' && !curr_arg[2]))
 			ft_select_arg(arg, curr_arg[i]);
 		else

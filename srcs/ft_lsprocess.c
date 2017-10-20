@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:56:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 16:09:09 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 17:21:27 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,14 @@ static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)
 {
 	DIR		*dir;
 	t_obj	*files;
+	t_obj	*head;
 	int		first;
+	char	*tmp;
 
 	first = 0;
 	files = NULL;
+	tmp = NULL;
+	head = dirlist;
 	while (dirlist)
 	{
 		dir = opendir(dirlist->name);
@@ -30,13 +34,18 @@ static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)
 		if (files)
 		{
 			first == 1 ? ft_putchar('\n') : NULL;
-			multidir ? ft_putendl(ft_strjoin(dirlist->name, ":")) : NULL;
+			if (multidir)
+			{
+				ft_putendl((tmp = ft_strjoin(dirlist->name, ":")));
+				free(tmp);
+			}
 			first = 1;
 			ft_lsdisplay(arg, files, 1);
 		}
 		files = NULL;
 		dirlist = dirlist->next;
 	}
+	ft_lsdelobj(&head);
 }
 
 static void	ft_lsdir(t_arg arg, t_list *list, int end_dir)
@@ -60,6 +69,7 @@ static void	ft_lsfile(t_arg arg, t_list *list)
 {
 	t_list	*current;
 	t_obj	*files;
+	//t_list	*first_file;
 
 	current = list;
 	files = NULL;
@@ -71,7 +81,7 @@ static void	ft_lsfile(t_arg arg, t_list *list)
 	if (files)
 	{
 		ft_lsdisplay(arg, files, 0);
-		ft_lstdel((t_list **)&files, (void(*)(void*, size_t))ft_lsdelobj);
+		ft_lsdelobj(&files);
 	}
 	ft_lstdel(&list, ft_lsdelpath);
 }

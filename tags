@@ -25,7 +25,6 @@ ANSI_RESET	libft/includes/libft_define.h	/^# define ANSI_RESET	/;"	d
 ANSI_UNDERLINED	libft/includes/libft_define.h	/^# define ANSI_UNDERLINED	/;"	d
 ANSI_WHITE	libft/includes/libft_define.h	/^# define ANSI_WHITE	/;"	d
 ANSI_YELLOW	libft/includes/libft_define.h	/^# define ANSI_YELLOW	/;"	d
-ARGS	includes/ft_ls_define.h	/^# define ARGS /;"	d
 A_KEY	libft/includes/libft_define.h	/^# define A_KEY	/;"	d
 BUFF_SIZE	libft/includes/libft_define.h	/^# define BUFF_SIZE /;"	d
 BUTTON1MOTIONMASK	libft/includes/libft_define.h	/^# define BUTTON1MOTIONMASK	/;"	d
@@ -42,12 +41,10 @@ B_KEY	libft/includes/libft_define.h	/^# define B_KEY	/;"	d
 CMP	Makefile	/^CMP			=	gcc$/;"	m
 CMP	libft/Makefile	/^CMP		=	gcc$/;"	m
 COLORMAPCHANGEMASK	libft/includes/libft_define.h	/^# define COLORMAPCHANGEMASK	/;"	d
-COLORS	includes/ft_ls_define.h	/^# define COLORS /;"	d
 CTRL	libft/includes/libft_define.h	/^# define CTRL	/;"	d
 CTYPEPATH	libft/Makefile	/^CTYPEPATH = ctype\/$/;"	m
 C_KEY	libft/includes/libft_define.h	/^# define C_KEY	/;"	d
-DATE	includes/ft_ls_define.h	/^# define DATE /;"	d
-DEBUG	Makefile	/^DEBUG		=	-g3 -fsanitize=address$/;"	m
+DEBUG	Makefile	/^DEBUG		=	-g3$/;"	m
 DEBUG	libft/Makefile	/^DEBUG	=	-g3 -fsanitize=address$/;"	m
 DOT_KEY	libft/includes/libft_define.h	/^# define DOT_KEY	/;"	d
 DOWN	libft/includes/libft_define.h	/^# define DOWN	/;"	d
@@ -64,7 +61,6 @@ EXT	Makefile	/^EXT			=	Makefile$/;"	m
 E_KEY	libft/includes/libft_define.h	/^# define E_KEY	/;"	d
 FDPATH	libft/Makefile	/^FDPATH = fd\/$/;"	m
 FD_MAX	libft/includes/libft_define.h	/^# define FD_MAX	/;"	d
-FILENAMEMAXLEN	includes/ft_ls_define.h	/^# define FILENAMEMAXLEN /;"	d
 FIVE	libft/includes/libft_define.h	/^# define FIVE	/;"	d
 FLAGS	Makefile	/^FLAGS		=	-Wall -Wextra -Werror -lpthread $/;"	m
 FLAGS	libft/Makefile	/^FLAGS	=	-g3 -Wall -Wextra -Werror$/;"	m
@@ -77,7 +73,6 @@ FT_LS_H	includes/ft_ls.h	/^# define FT_LS_H$/;"	d
 FT_LS_STRUCT_H	includes/ft_ls_struct.h	/^# define FT_LS_STRUCT_H$/;"	d
 F_KEY	libft/includes/libft_define.h	/^# define F_KEY	/;"	d
 GFXPATH	libft/Makefile	/^GFXPATH = gfx\/$/;"	m
-GROUP	includes/ft_ls_define.h	/^# define GROUP /;"	d
 G_KEY	libft/includes/libft_define.h	/^# define G_KEY	/;"	d
 H_KEY	libft/includes/libft_define.h	/^# define H_KEY	/;"	d
 INCDIR	libft/Makefile	/^INCDIR = .\/includes$/;"	m
@@ -100,10 +95,8 @@ LIBFT_STRUCT_H	libft/includes/libft_struct.h	/^# define LIBFT_STRUCT_H$/;"	d
 LIBS	Makefile	/^LIBS		=	-lft$/;"	m
 LIB_DIR	Makefile	/^LIB_DIR		=	-L libft\/$/;"	m
 LISTPATH	libft/Makefile	/^LISTPATH = list\/$/;"	m
-LNKS	includes/ft_ls_define.h	/^# define LNKS /;"	d
-LS_FLAGS	includes/ft_ls_define.h	/^# define LS_FLAGS /;"	d
+LSFLAGS	includes/ft_ls_define.h	/^# define LSFLAGS /;"	d
 L_KEY	libft/includes/libft_define.h	/^# define L_KEY	/;"	d
-MAJ	includes/ft_ls_define.h	/^# define MAJ /;"	d
 MATHPATH	libft/Makefile	/^MATHPATH = math\/$/;"	m
 MAX_EVENT	libft/minilibx/mlx_int.h	/^#define	MAX_EVENT	/;"	d
 MAX_INT	libft/includes/libft_define.h	/^# define MAX_INT	/;"	d
@@ -114,7 +107,6 @@ MINUS	libft/includes/libft_define.h	/^# define MINUS	/;"	d
 MIN_INT	libft/includes/libft_define.h	/^# define MIN_INT	/;"	d
 MLX	libft/Makefile	/^MLX		=	-L minilibx\/ -lmlx -framework OpenGL -framework AppKit$/;"	m
 MLX_H	libft/minilibx/mlx.h	/^#define	MLX_H$/;"	d
-MODE	includes/ft_ls_define.h	/^# define MODE /;"	d
 MOUSE_LEFT	libft/includes/libft_define.h	/^# define MOUSE_LEFT	/;"	d
 MOUSE_RIGHT	libft/includes/libft_define.h	/^# define MOUSE_RIGHT	/;"	d
 MOUSE_SIDE	libft/includes/libft_define.h	/^# define MOUSE_SIDE	/;"	d
@@ -135,7 +127,6 @@ OBJS	libft/Makefile	/^OBJS = $(addprefix $(OBJDIR), $(addsuffix .o, $(basename $
 OBJS_DIRS	libft/Makefile	/^OBJS_DIRS = $(sort $(dir $(OBJS)))$/;"	m
 OK	libft/includes/libft_define.h	/^# define OK	/;"	d
 ONE	libft/includes/libft_define.h	/^# define ONE	/;"	d
-OWN	includes/ft_ls_define.h	/^# define OWN /;"	d
 OWNERGRABBUTTONMASK	libft/includes/libft_define.h	/^# define OWNERGRABBUTTONMASK	/;"	d
 O_KEY	libft/includes/libft_define.h	/^# define O_KEY	/;"	d
 PERSOPATH	libft/Makefile	/^PERSOPATH = perso\/$/;"	m
@@ -157,7 +148,7 @@ RIGHT	libft/includes/libft_define.h	/^# define RIGHT	/;"	d
 R_KEY	libft/includes/libft_define.h	/^# define R_KEY	/;"	d
 SEVEN	libft/includes/libft_define.h	/^# define SEVEN	/;"	d
 SIX	libft/includes/libft_define.h	/^# define SIX	/;"	d
-SIZE	includes/ft_ls_define.h	/^# define SIZE /;"	d
+SIXMONTHSINSEC	includes/ft_ls_define.h	/^# define SIXMONTHSINSEC /;"	d
 SLASH	libft/includes/libft_define.h	/^# define SLASH	/;"	d
 SLASH_KEY	libft/includes/libft_define.h	/^# define SLASH_KEY	/;"	d
 SRC	Makefile	/^SRC 		=	srcs\/ft_ls.c \\$/;"	m
@@ -265,16 +256,17 @@ ft_lsR	srcs/ft_lsR.c	/^void		ft_lsR(t_arg arg, t_obj *files)$/;"	f
 ft_lsRprocess	srcs/ft_lsR.c	/^void	ft_lsRprocess(t_arg arg, char *path)$/;"	f
 ft_lsbasicdisplay	srcs/ft_lsoutput.c	/^void			ft_lsbasicdisplay(t_arg arg, t_obj *files)$/;"	f
 ft_lscpyobj	srcs/utils.c	/^void		ft_lscpyobj(t_obj **objs, t_obj *to_cpy)$/;"	f
-ft_lsdelobj	srcs/ft_lsdel.c	/^void			ft_lsdelobj(t_obj *obj, size_t size)$/;"	f
+ft_lsdelobj	srcs/ft_lsdel.c	/^void			ft_lsdelobj(t_obj **alst)$/;"	f
 ft_lsdelpath	srcs/ft_lsdel.c	/^void			ft_lsdelpath(void *path, size_t size)$/;"	f
 ft_lsdir	srcs/ft_lsprocess.c	/^static void	ft_lsdir(t_arg arg, t_list *list, int end_dir)$/;"	f	file:
 ft_lsdisp_usrgrp_size	srcs/ft_lslongsize.c	/^void				ft_lsdisp_usrgrp_size(t_disp_size *size, t_obj *current)$/;"	f
 ft_lsdisplay	srcs/ft_lsoutput.c	/^void			ft_lsdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f
-ft_lsdisplaytime	srcs/ft_lsoutput.c	/^static void		ft_lsdisplaytime(time_t date)$/;"	f	file:
+ft_lsdisplaytime	srcs/ft_lsoutput.c	/^static void		ft_lsdisplaytime(time_t date, char *file_time, char *base_time)$/;"	f	file:
 ft_lsdispsize	srcs/ft_lslongsize.c	/^void				ft_lsdispsize(t_disp_size *size, t_obj *current)$/;"	f
 ft_lsfile	srcs/ft_lsprocess.c	/^static void	ft_lsfile(t_arg arg, t_list *list)$/;"	f	file:
 ft_lsgetfiles	srcs/ft_lsgetinfo.c	/^void			ft_lsgetfiles(t_obj **files, char *name, char *path, t_arg arg)$/;"	f
 ft_lsgetobjsindir	srcs/ft_lsgetinfo.c	/^int				ft_lsgetobjsindir(t_obj **files, struct dirent *file, \\$/;"	f
+ft_lsgivetime	srcs/ft_lsoutput.c	/^static void		ft_lsgivetime(time_t date)$/;"	f	file:
 ft_lsinsidedirs	srcs/ft_lsprocess.c	/^static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)$/;"	f	file:
 ft_lslongdisplay	srcs/ft_lsoutput.c	/^void			ft_lslongdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f
 ft_lslongdisplayfile	srcs/ft_lsoutput.c	/^void			ft_lslongdisplayfile(t_arg arg, t_obj *current, \\$/;"	f

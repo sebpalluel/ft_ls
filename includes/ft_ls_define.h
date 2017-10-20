@@ -6,24 +6,15 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 14:29:58 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/18 14:31:56 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 18:15:27 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LS_DEFINE_H
 # define FT_LS_DEFINE_H
 
-# define LS_FLAGS "GRaflrt1"
+# define LSFLAGS "1lRartug"
 
-# define MODE 0
-# define LNKS 1
-# define OWN 2
-# define GROUP 3
-# define MAJ 4
-# define SIZE 5
-# define DATE 6
-# define ARGS 9
-# define FILENAMEMAXLEN 255
-# define COLORS 10
+# define SIXMONTHSINSEC 15724800
 
 #endif

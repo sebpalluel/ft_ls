@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 01:39:04 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 13:05:22 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 18:09:24 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	ft_lsRprocess(t_arg arg, char *path)
 		closedir(dir);
 		if (files)
 			ft_lsdisplay(arg, files, 1);
-		files = NULL;
 	}
 	else
 		ft_perror("ft_ls: ", path, 0);

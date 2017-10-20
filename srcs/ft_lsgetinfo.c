@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:15:13 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 15:51:53 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 17:21:14 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,11 @@ int				ft_lsgetobjsindir(t_obj **files, struct dirent *file, \
 
 	objs = *files;
 	if (!file)
+	{
+		if (path)
+			free(path);
 		return (0);
+	}
 	if (objs)
 	{
 		while (objs->next)
@@ -53,6 +57,7 @@ int				ft_lsgetobjsindir(t_obj **files, struct dirent *file, \
 	}
 	else
 		*files = ft_newobj(file->d_name, path, arg);
+	free(path);
 	return (1);
 }
 

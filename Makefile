@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2017/01/09 14:05:27 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/10/20 15:51:36 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/10/20 17:15:51 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -29,7 +29,7 @@ OBJ			=	$(SRC:.c=.o)
 
 CMP			=	gcc
 
-DEBUG		=	-g3 -fsanitize=address
+DEBUG		=	-g3
 
 FLAGS		=	-Wall -Wextra -Werror -lpthread 
 
