@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:51:05 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 01:19:28 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 12:57:15 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,5 @@ void			ft_lsdisplay(t_arg arg, t_obj *files, int fileordir)
 	current = ft_lsorganizeobjs(current, arg);
 	(arg.l == 1) ? ft_lslongdisplay(arg, current, fileordir) : \
 			ft_lsbasicdisplay(arg, current);
-	//arg.R == 1 ? recursion(arg, current) : NULL;
-	fileordir = 0;
+	arg.R == 1 ? ft_lsR(arg, current) : NULL;
 }

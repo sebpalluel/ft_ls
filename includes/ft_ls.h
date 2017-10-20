@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 14:25:34 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 00:54:27 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 13:06:22 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # include <dirent.h>
 
 void		ft_lsprocess(t_arg arg, t_list *list, int end_dir);
-int			ft_lsgetfilesindir(t_obj **files, struct dirent *file, \
+int			ft_lsgetobjsindir(t_obj **files, struct dirent *file, \
 		char *path, t_arg arg);
 void		ft_lsgetfiles(t_obj **files, char *name, char *path, t_arg arg);
 void		ft_lsdisplay(t_arg arg, t_obj *files, int fileordir);
@@ -38,5 +38,6 @@ void		ft_lsprintfilemode(t_obj *obj);
 void		ft_lsprintint(int nlink, int space);
 void		ft_lsprintstr(char *str, int space);
 void		ft_lsprintmajmin(t_obj *file, t_disp_size size);
+void		ft_lsR(t_arg arg, t_obj *files);
 
 #endif

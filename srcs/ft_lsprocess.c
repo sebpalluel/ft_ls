@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:56:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 12:37:34 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 13:06:57 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)
 	while (dirlist)
 	{
 		dir = opendir(dirlist->name);
-		while (ft_lsgetfilesindir(&files, readdir(dir), \
+		while (ft_lsgetobjsindir(&files, readdir(dir), \
 			ft_strjoin(dirlist->path, "/"), arg) != 0)
 			;
 		closedir(dir);

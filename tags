@@ -261,6 +261,8 @@ ft_isspace	libft/srcs/ctype/ft_isspace.c	/^int		ft_isspace(int c)$/;"	f
 ft_itoa	libft/srcs/stdlib/ft_itoa.c	/^char			*ft_itoa(int n)$/;"	f
 ft_letters	libft/srcs/str/ft_strsplit.c	/^static unsigned int		ft_letters(char const *s, char c, int i)$/;"	f	file:
 ft_lines	libft/srcs/str/ft_strsplit.c	/^static unsigned int		ft_lines(char const *s, char c)$/;"	f	file:
+ft_lsR	srcs/ft_lsR.c	/^void		ft_lsR(t_arg arg, t_obj *files)$/;"	f
+ft_lsRprocess	srcs/ft_lsR.c	/^void	ft_lsRprocess(t_arg arg, char *path)$/;"	f
 ft_lsbasicdisplay	srcs/ft_lsoutput.c	/^void			ft_lsbasicdisplay(t_arg arg, t_obj *files)$/;"	f
 ft_lscpyobj	srcs/utils.c	/^void		ft_lscpyobj(t_obj **objs, t_obj *to_cpy)$/;"	f
 ft_lsdir	srcs/ft_lsprocess.c	/^static void	ft_lsdir(t_arg arg, t_list *list, int end_dir)$/;"	f	file:
@@ -270,7 +272,7 @@ ft_lsdisplaytime	srcs/ft_lsoutput.c	/^static void		ft_lsdisplaytime(time_t date)
 ft_lsdispsize	srcs/ft_lslongsize.c	/^void				ft_lsdispsize(t_disp_size *size, t_obj *current)$/;"	f
 ft_lsfile	srcs/ft_lsprocess.c	/^static void	ft_lsfile(t_arg arg, t_list *list)$/;"	f	file:
 ft_lsgetfiles	srcs/ft_lsgetinfo.c	/^void			ft_lsgetfiles(t_obj **files, char *name, char *path, t_arg arg)$/;"	f
-ft_lsgetfilesindir	srcs/ft_lsgetinfo.c	/^int				ft_lsgetfilesindir(t_obj **files, struct dirent *file, \\$/;"	f
+ft_lsgetobjsindir	srcs/ft_lsgetinfo.c	/^int				ft_lsgetobjsindir(t_obj **files, struct dirent *file, \\$/;"	f
 ft_lsinsidedirs	srcs/ft_lsprocess.c	/^static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)$/;"	f	file:
 ft_lslongdisplay	srcs/ft_lsoutput.c	/^void			ft_lslongdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f
 ft_lslongdisplayfile	srcs/ft_lsoutput.c	/^void			ft_lslongdisplayfile(t_arg arg, t_obj *current, \\$/;"	f

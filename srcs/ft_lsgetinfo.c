@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:15:13 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/18 19:47:45 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 13:06:51 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static t_obj	*ft_newobj(char *name, char *path, t_arg arg)
 	return (obj);
 }
 
-int				ft_lsgetfilesindir(t_obj **files, struct dirent *file, \
+int				ft_lsgetobjsindir(t_obj **files, struct dirent *file, \
 		char *path, t_arg arg)
 {
 	t_obj		*objs;
