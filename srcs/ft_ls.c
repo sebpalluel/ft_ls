@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 15:37:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 01:34:31 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 12:37:22 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static void		ft_parse_arg(int argc, char **argv, t_arg *arg, t_list **list)
 				curr_arg[1] != '\0')
 			ft_get_arg(arg, curr_arg);
 		else
-			ft_lstpushback(list, curr_arg, ft_strlen(curr_arg));
+			ft_lstpushback(list, curr_arg, ft_strlen(curr_arg) + 1);
 	}
 }
 
