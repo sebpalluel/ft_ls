@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:56:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 15:26:08 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 16:03:59 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)
 	{
 		dir = opendir(dirlist->name);
 		while (ft_lsgetobjsindir(&files, readdir(dir), \
-			ft_strjoin(dirlist->path, "/"), arg) != 0)
+					ft_strjoin(dirlist->path, "/"), arg) != 0)
 			;
 		closedir(dir);
 		if (files)
@@ -53,6 +53,7 @@ static void	ft_lsdir(t_arg arg, t_list *list, int end_dir)
 	}
 	dirs = ft_lsorganizeobjs(dirs, arg);
 	ft_lsinsidedirs(arg, dirs, end_dir);
+	ft_lstdel(&list, ft_lsdelpath);
 }
 
 static void	ft_lsfile(t_arg arg, t_list *list)
@@ -68,10 +69,8 @@ static void	ft_lsfile(t_arg arg, t_list *list)
 		current = current->next;
 	}
 	if (files)
-	{
-	ft_lsdisplay(arg, files, 0);
-	ft_lstdel((t_list **)&files, (void(*)(void*, size_t))ft_lsdelobj);
-	}
+		ft_lsdisplay(arg, files, 0);
+	ft_lstdel(&list, ft_lsdelpath);
 }
 
 void		ft_lsprocess(t_arg arg, t_list *list, int end_dir)
@@ -88,7 +87,7 @@ void		ft_lsprocess(t_arg arg, t_list *list, int end_dir)
 	{
 		if ((dir = opendir(current->content)) == NULL)
 			errno != ENOTDIR ? ft_perror("ft_ls: ", current->content, 0) : \
-				ft_lstpushback(&file, current->content, current->content_size);
+					 ft_lstpushback(&file, current->content, current->content_size);
 		else
 		{
 			ft_lstpushback(&directory, current->content, current->content_size);
@@ -100,6 +99,4 @@ void		ft_lsprocess(t_arg arg, t_list *list, int end_dir)
 	file ? ft_lsfile(arg, file) : NULL;
 	(file && directory) ? ft_putchar('\n') : NULL;
 	directory ? ft_lsdir(arg, directory, end_dir) : NULL;
-	//if (directory)
-	//ft_lstdel(&directory, (void(*)(void*, size_t))ft_lsdelobj);
 }
