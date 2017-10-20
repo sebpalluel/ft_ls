@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:56:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 13:06:57 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 15:26:08 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,10 @@ static void	ft_lsfile(t_arg arg, t_list *list)
 		current = current->next;
 	}
 	if (files)
-		ft_lsdisplay(arg, files, 0);
+	{
+	ft_lsdisplay(arg, files, 0);
+	ft_lstdel((t_list **)&files, (void(*)(void*, size_t))ft_lsdelobj);
+	}
 }
 
 void		ft_lsprocess(t_arg arg, t_list *list, int end_dir)
@@ -97,4 +100,6 @@ void		ft_lsprocess(t_arg arg, t_list *list, int end_dir)
 	file ? ft_lsfile(arg, file) : NULL;
 	(file && directory) ? ft_putchar('\n') : NULL;
 	directory ? ft_lsdir(arg, directory, end_dir) : NULL;
+	//if (directory)
+	//ft_lstdel(&directory, (void(*)(void*, size_t))ft_lsdelobj);
 }

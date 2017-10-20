@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:15:13 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 13:06:51 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 15:08:13 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,19 @@ static t_obj	*ft_newobj(char *name, char *path, t_arg arg)
 	obj->st_rdev = file_stat.st_rdev;
 	obj->next = NULL;
 	return (obj);
+}
+
+void			ft_lsdelobj(t_obj *obj, size_t size)
+{
+	if (obj->path != NULL)
+	{
+		printf("obj path %s", obj->path);
+		free(obj->path);
+	}
+	if (obj->name != NULL)
+		free(obj->name);
+	ft_bzero(obj, size);
+	free(obj);
 }
 
 int				ft_lsgetobjsindir(t_obj **files, struct dirent *file, \

@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 15:37:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 12:37:22 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/20 15:03:52 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,6 @@ int				main(int argc, char **argv)
 	if (list == NULL)
 		list = ft_lstnew(".", 1);
 	ft_lsprocess(arg, list, list->next != NULL ? 1 : 0);
+	while(42);
 	return (0);
 }
