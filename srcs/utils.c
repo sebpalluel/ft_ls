@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/19 16:03:39 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/21 19:00:36 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/21 20:31:32 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ void		ft_lscpyobj(t_obj **objs, t_obj *to_cpy)
 	(*objs)->st_nlink = to_cpy->st_nlink;
 	(*objs)->st_blocks = to_cpy->st_blocks;
 	(*objs)->st_size = to_cpy->st_size;
-	(*objs)->st_rdev = to_cpy->st_rdev;
 	(*objs)->not_a_dir = to_cpy->not_a_dir;
 	(*objs)->maj = to_cpy->maj;
 	(*objs)->min = to_cpy->min;
+	(*objs)->lnked_to = to_cpy->lnked_to;
 }
 
 void		ft_lsswapobj(t_obj **a, t_obj **b)

@@ -257,7 +257,6 @@ ft_lsRprocess	srcs/ft_lsR.c	/^void	ft_lsRprocess(t_arg arg, char *path)$/;"	f
 ft_lsbasicdisplay	srcs/ft_lsoutput.c	/^void			ft_lsbasicdisplay(t_arg arg, t_obj *files)$/;"	f
 ft_lscpyobj	srcs/utils.c	/^void		ft_lscpyobj(t_obj **objs, t_obj *to_cpy)$/;"	f
 ft_lsdelobj	srcs/ft_lsdel.c	/^void		ft_lsdelobj(t_obj **alst)$/;"	f
-ft_lsdelobjdisplay	srcs/ft_lsdel.c	/^void		ft_lsdelobjdisplay(t_obj **alst)$/;"	f
 ft_lsdelpath	srcs/ft_lsdel.c	/^void		ft_lsdelpath(void *path, size_t size)$/;"	f
 ft_lsdir	srcs/ft_lsprocess.c	/^static void	ft_lsdir(t_arg arg, t_list *path, int end_dir)$/;"	f	file:
 ft_lsdisp_usrgrp_size	srcs/ft_lslongsize.c	/^void				ft_lsdisp_usrgrp_size(t_disp_size *size, t_obj *current)$/;"	f
@@ -266,6 +265,7 @@ ft_lsdisplaytime	srcs/ft_lsoutput.c	/^static void		ft_lsdisplaytime(time_t date,
 ft_lsdispsize	srcs/ft_lslongsize.c	/^void				ft_lsdispsize(t_disp_size *size, t_obj *current)$/;"	f
 ft_lsfile	srcs/ft_lsprocess.c	/^static void	ft_lsfile(t_arg arg, t_list *path)$/;"	f	file:
 ft_lsgetfiles	srcs/ft_lsgetinfo.c	/^void			ft_lsgetfiles(t_obj **files, char *name, char *path, t_arg arg)$/;"	f
+ft_lsgetlink	srcs/ft_lsgetinfo.c	/^static t_obj	*ft_lsgetlink(t_obj *obj)$/;"	f	file:
 ft_lsgetobjsindir	srcs/ft_lsgetinfo.c	/^int				ft_lsgetobjsindir(t_obj **files, struct dirent *file, \\$/;"	f
 ft_lsgivetime	srcs/ft_lsoutput.c	/^static void		ft_lsgivetime(time_t date)$/;"	f	file:
 ft_lsinsidedirs	srcs/ft_lsprocess.c	/^static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)$/;"	f	file:
@@ -425,6 +425,7 @@ img_list	libft/minilibx/mlx_int.h	/^  mlx_img_ctx_t		*img_list;$/;"	m	struct:mlx
 img_list	libft/minilibx/mlx_int.h	/^  mlx_img_list_t	*img_list;$/;"	m	struct:mlx_ptr_s
 l	includes/ft_ls_struct.h	/^	int				l;$/;"	m	struct:s_arg
 lenght	libft/srcs/stdlib/ft_stoul.c	/^static int			lenght(char *str, int base)$/;"	f	file:
+lnked_to	includes/ft_ls_struct.h	/^	char			*lnked_to;$/;"	m	struct:s_obj
 lnkspace	includes/ft_ls_struct.h	/^	int				lnkspace;$/;"	m	struct:s_disp_size
 loc_font_atlassize	libft/minilibx/mlx_int.h	/^  GLint		loc_font_atlassize;$/;"	m	struct:glsl_info_s
 loc_font_color	libft/minilibx/mlx_int.h	/^  GLint		loc_font_color;$/;"	m	struct:glsl_info_s
@@ -521,7 +522,6 @@ st_blocks	includes/ft_ls_struct.h	/^	quad_t			st_blocks;$/;"	m	struct:s_obj
 st_gid	includes/ft_ls_struct.h	/^	gid_t			st_gid;$/;"	m	struct:s_obj
 st_mode	includes/ft_ls_struct.h	/^	mode_t			st_mode;$/;"	m	struct:s_obj
 st_nlink	includes/ft_ls_struct.h	/^	nlink_t			st_nlink;$/;"	m	struct:s_obj
-st_rdev	includes/ft_ls_struct.h	/^	dev_t			st_rdev;$/;"	m	struct:s_obj
 st_size	includes/ft_ls_struct.h	/^	off_t			st_size;$/;"	m	struct:s_obj
 st_uid	includes/ft_ls_struct.h	/^	uid_t			st_uid;$/;"	m	struct:s_obj
 t	includes/ft_ls_struct.h	/^	int				t;$/;"	m	struct:s_arg

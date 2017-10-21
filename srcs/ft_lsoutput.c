@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:51:05 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/21 18:55:12 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/21 20:32:26 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,14 @@ void			ft_lslongdisplayfile(t_arg arg, t_obj *current, \
 		ft_lsprintint(current->st_size, size.size);
 	ft_lsgivetime(current->date);
 	ft_color_mode(current->st_mode);
-	ft_putendl(current->name);
+	ft_putstr(current->name);
+	if (S_ISLNK(current->st_mode))
+	{
+		ft_putstr(ANSI_RESET);
+		ft_putstr(" -> ");
+		ft_putstr(current->lnked_to);
+	}
+	ft_putchar('\n');
 	ft_putstr(ANSI_RESET);
 }
 
@@ -125,5 +132,5 @@ void			ft_lsdisplay(t_arg arg, t_obj *files, int fileordir)
 	(arg.l == 1) ? ft_lslongdisplay(arg, current, fileordir) : \
 			ft_lsbasicdisplay(arg, current);
 	arg.R == 1 ? ft_lsR(arg, current) : NULL;
-	ft_lsdelobjdisplay(&files);
+	ft_lsdelobj(&files);
 }

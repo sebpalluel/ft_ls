@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 14:29:44 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/21 18:31:56 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/21 20:31:12 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,10 @@ typedef struct		s_obj
 	nlink_t			st_nlink;
 	quad_t			st_blocks;
 	off_t			st_size;
-	dev_t			st_rdev;
 	int				not_a_dir;
 	long			maj;
 	long			min;
+	char			*lnked_to;
 	struct s_obj	*next;
 }					t_obj;
 
