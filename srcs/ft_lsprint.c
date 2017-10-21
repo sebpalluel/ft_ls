@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/19 22:53:07 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/19 23:57:18 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/21 18:33:57 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,16 +70,16 @@ void		ft_lsprintmajmin(t_obj *file, t_disp_size size)
 	int		min;
 	int		maj;
 
-	min = ft_intlen(minor(file->st_rdev));
-	maj = ft_intlen(major(file->st_rdev));
-	ft_putnbr(major(file->st_rdev));
+	min = ft_intlen(file->min);
+	maj = ft_intlen(file->maj);
+	ft_putnbr(file->maj);
 	while (maj < size.maj)
 	{
 		ft_putchar(' ');
 		size.maj--;
 	}
 	ft_putstr(", ");
-	ft_putnbr(minor(file->st_rdev));
+	ft_putnbr(file->min);
 	while (min < size.min)
 	{
 		ft_putchar(' ');

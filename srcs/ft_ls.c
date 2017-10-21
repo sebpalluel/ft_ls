@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 15:37:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 18:15:19 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/21 16:45:23 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static void		ft_get_arg(t_arg *arg, char *curr_arg)
 	}
 }
 
-static void		ft_parse_arg(int argc, char **argv, t_arg *arg, t_list **list)
+static void		ft_parse_arg(int argc, char **argv, t_arg *arg, t_list **path)
 {
 	int			nb_arg;
 	char		*curr_arg;
@@ -64,23 +64,23 @@ static void		ft_parse_arg(int argc, char **argv, t_arg *arg, t_list **list)
 				curr_arg[1] != '\0')
 			ft_get_arg(arg, curr_arg);
 		else
-			ft_lstpushback(list, curr_arg, ft_strlen(curr_arg) + 1);
+			ft_lstpushback(path, curr_arg, ft_strlen(curr_arg) + 1);
 	}
 }
 
 int				main(int argc, char **argv)
 {
 	t_arg		arg;
-	t_list		*list;
+	t_list		*path;
 
-	list = NULL;
+	path = NULL;
 	ft_memset(&arg, 0, sizeof(t_arg));
 	if (argc > 1)
-		ft_parse_arg(argc, argv, &arg, &list);
-	if (list == NULL)
-		list = ft_lstnew(".", 1);
-	ft_lsprocess(arg, list, list->next != NULL ? 1 : 0);
-	ft_lstdel(&list, ft_lsdelpath);
+		ft_parse_arg(argc, argv, &arg, &path);
+	if (path == NULL)
+		path = ft_lstnew(".", 1);
+	ft_lsprocess(arg, path, path->next != NULL ? 1 : 0);
+	ft_lstdel(&path, ft_lsdelpath);
 	while(42);
 	return (0);
 }

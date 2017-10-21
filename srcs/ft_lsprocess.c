@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:56:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/21 16:40:05 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/21 18:16:33 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,12 @@ static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)
 	ft_lsdelobj(&head);
 }
 
-static void	ft_lsdir(t_arg arg, t_list *list, int end_dir)
+static void	ft_lsdir(t_arg arg, t_list *path, int end_dir)
 {
 	t_list	*current;
 	t_obj	*dirs;
 
-	current = list;
+	current = path;
 	dirs = NULL;
 	while (current)
 	{
@@ -64,12 +64,12 @@ static void	ft_lsdir(t_arg arg, t_list *list, int end_dir)
 	ft_lsinsidedirs(arg, dirs, end_dir);
 }
 
-static void	ft_lsfile(t_arg arg, t_list *list)
+static void	ft_lsfile(t_arg arg, t_list *path)
 {
 	t_list	*current;
 	t_obj	*files;
 
-	current = list;
+	current = path;
 	files = NULL;
 	while (current)
 	{
@@ -80,7 +80,7 @@ static void	ft_lsfile(t_arg arg, t_list *list)
 		ft_lsdisplay(arg, files, 0);
 }
 
-void		ft_lsprocess(t_arg arg, t_list *list, int end_dir)
+void		ft_lsprocess(t_arg arg, t_list *path, int end_dir)
 {
 	DIR		*dir;
 	t_list	*file;
@@ -89,7 +89,7 @@ void		ft_lsprocess(t_arg arg, t_list *list, int end_dir)
 
 	file = NULL;
 	directory = NULL;
-	current = list;
+	current = path;
 	while (current)
 	{
 		if ((dir = opendir(current->content)) == NULL)

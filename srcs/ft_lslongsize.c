@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/19 18:10:39 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/21 15:15:30 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/21 18:33:05 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,10 @@ void				ft_lsdisp_usrgrp_size(t_disp_size *size, t_obj *current)
 
 void				ft_lsdispsize(t_disp_size *size, t_obj *current)
 {
-	size->lnkspace = ft_get_max_size(ft_intlen(current->st_nlink), size->lnkspace);
-	size->maj = ft_get_max_size(ft_intlen(major(current->st_rdev)), size->maj);
-	size->min = ft_get_max_size(ft_intlen(minor(current->st_rdev)), size->min);
+	size->lnkspace = ft_get_max_size(ft_intlen(current->st_nlink), \
+			size->lnkspace);
+	size->maj = ft_get_max_size(ft_intlen(current->maj), size->maj);
+	size->min = ft_get_max_size(ft_intlen(current->min), size->min);
 	size->size = ft_get_max_size(ft_intlen(current->st_size), size->size);
 	size->total += current->st_blocks;
 	ft_lsdisp_usrgrp_size(size, current);

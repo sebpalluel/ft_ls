@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:15:13 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 17:21:14 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/21 18:46:47 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ static t_obj	*ft_newobj(char *name, char *path, t_arg arg)
 	obj->st_blocks = file_stat.st_blocks;
 	obj->st_size = file_stat.st_size;
 	obj->st_rdev = file_stat.st_rdev;
+	obj->maj = major(obj->st_rdev);
+	obj->min = minor(obj->st_rdev);
+	printf("%p name %s, maj %ld min %ld \n", obj, obj->name, obj->maj, obj->min);
 	obj->next = NULL;
 	return (obj);
 }

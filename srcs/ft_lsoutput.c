@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:51:05 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/21 16:37:32 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/21 18:55:12 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,9 @@ void			ft_lslongdisplayfile(t_arg arg, t_obj *current, \
 	else
 		ft_lsprintstr(ft_itoa(current->st_gid), size.grpspace);
 	if (S_ISCHR(current->st_mode) || S_ISBLK(current->st_mode))
+	{
 		ft_lsprintmajmin(current, size);
+	}
 	else
 		ft_lsprintint(current->st_size, size.size);
 	ft_lsgivetime(current->date);

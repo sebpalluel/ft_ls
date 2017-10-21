@@ -259,12 +259,12 @@ ft_lscpyobj	srcs/utils.c	/^void		ft_lscpyobj(t_obj **objs, t_obj *to_cpy)$/;"	f
 ft_lsdelobj	srcs/ft_lsdel.c	/^void		ft_lsdelobj(t_obj **alst)$/;"	f
 ft_lsdelobjdisplay	srcs/ft_lsdel.c	/^void		ft_lsdelobjdisplay(t_obj **alst)$/;"	f
 ft_lsdelpath	srcs/ft_lsdel.c	/^void		ft_lsdelpath(void *path, size_t size)$/;"	f
-ft_lsdir	srcs/ft_lsprocess.c	/^static void	ft_lsdir(t_arg arg, t_list *list, int end_dir)$/;"	f	file:
+ft_lsdir	srcs/ft_lsprocess.c	/^static void	ft_lsdir(t_arg arg, t_list *path, int end_dir)$/;"	f	file:
 ft_lsdisp_usrgrp_size	srcs/ft_lslongsize.c	/^void				ft_lsdisp_usrgrp_size(t_disp_size *size, t_obj *current)$/;"	f
 ft_lsdisplay	srcs/ft_lsoutput.c	/^void			ft_lsdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f
 ft_lsdisplaytime	srcs/ft_lsoutput.c	/^static void		ft_lsdisplaytime(time_t date, char *file_time, char *base_time)$/;"	f	file:
 ft_lsdispsize	srcs/ft_lslongsize.c	/^void				ft_lsdispsize(t_disp_size *size, t_obj *current)$/;"	f
-ft_lsfile	srcs/ft_lsprocess.c	/^static void	ft_lsfile(t_arg arg, t_list *list)$/;"	f	file:
+ft_lsfile	srcs/ft_lsprocess.c	/^static void	ft_lsfile(t_arg arg, t_list *path)$/;"	f	file:
 ft_lsgetfiles	srcs/ft_lsgetinfo.c	/^void			ft_lsgetfiles(t_obj **files, char *name, char *path, t_arg arg)$/;"	f
 ft_lsgetobjsindir	srcs/ft_lsgetinfo.c	/^int				ft_lsgetobjsindir(t_obj **files, struct dirent *file, \\$/;"	f
 ft_lsgivetime	srcs/ft_lsoutput.c	/^static void		ft_lsgivetime(time_t date)$/;"	f	file:
@@ -279,7 +279,7 @@ ft_lsprintfilemode	srcs/ft_lsprint.c	/^void		ft_lsprintfilemode(t_obj *obj)$/;"	
 ft_lsprintint	srcs/ft_lsprint.c	/^void		ft_lsprintint(int nlink, int space)$/;"	f
 ft_lsprintmajmin	srcs/ft_lsprint.c	/^void		ft_lsprintmajmin(t_obj *file, t_disp_size size)$/;"	f
 ft_lsprintstr	srcs/ft_lsprint.c	/^void		ft_lsprintstr(char *str, int space)$/;"	f
-ft_lsprocess	srcs/ft_lsprocess.c	/^void		ft_lsprocess(t_arg arg, t_list *list, int end_dir)$/;"	f
+ft_lsprocess	srcs/ft_lsprocess.c	/^void		ft_lsprocess(t_arg arg, t_list *path, int end_dir)$/;"	f
 ft_lsreverseorderobjs	srcs/ft_lsorganize.c	/^void		ft_lsreverseorderobjs(t_obj **files)$/;"	f
 ft_lsswapobj	srcs/utils.c	/^void		ft_lsswapobj(t_obj **a, t_obj **b)$/;"	f
 ft_lstadd	libft/srcs/list/ft_lstadd.c	/^void	ft_lstadd(t_list **alst, t_list *new)$/;"	f
@@ -325,7 +325,7 @@ ft_mlxdelete	libft/srcs/gfx/ft_mlxdelete.c	/^void		ft_mlxdelete(t_mlx *mlx, t_im
 ft_namecmp	srcs/utils.c	/^int			ft_namecmp(t_obj *obj1, t_obj *obj2)$/;"	f
 ft_newobj	srcs/ft_lsgetinfo.c	/^static t_obj	*ft_newobj(char *name, char *path, t_arg arg)$/;"	f	file:
 ft_open	libft/srcs/fd/ft_open.c	/^size_t		ft_open(t_fd *fd, int flags, int rights)$/;"	f
-ft_parse_arg	srcs/ft_ls.c	/^static void		ft_parse_arg(int argc, char **argv, t_arg *arg, t_list **list)$/;"	f	file:
+ft_parse_arg	srcs/ft_ls.c	/^static void		ft_parse_arg(int argc, char **argv, t_arg *arg, t_list **path)$/;"	f	file:
 ft_perror	libft/srcs/perso/ft_perror.c	/^void	ft_perror(char *name, char *error, int exit_f)$/;"	f
 ft_pixcpy	libft/srcs/gfx/ft_pixcpy.c	/^void		ft_pixcpy(t_pix *pix_from, t_pix *pix_to)$/;"	f
 ft_pixnew	libft/srcs/gfx/ft_pixnew.c	/^t_pix		*ft_pixnew(int x, int y, int z)$/;"	f
@@ -447,7 +447,9 @@ loop_timer	libft/minilibx/mlx_int.h	/^  void			*loop_timer;$/;"	m	struct:mlx_ptr
 main	srcs/ft_ls.c	/^int				main(int argc, char **argv)$/;"	f
 main_loop_active	libft/minilibx/mlx_int.h	/^  int			main_loop_active;$/;"	m	struct:mlx_ptr_s
 maj	includes/ft_ls_struct.h	/^	int				maj;$/;"	m	struct:s_disp_size
+maj	includes/ft_ls_struct.h	/^	long			maj;$/;"	m	struct:s_obj
 min	includes/ft_ls_struct.h	/^	int				min;$/;"	m	struct:s_disp_size
+min	includes/ft_ls_struct.h	/^	long			min;$/;"	m	struct:s_obj
 mlx_col_name	libft/minilibx/mlx_rgb.c	/^struct s_col_name mlx_col_name[] =$/;"	v	typeref:struct:s_col_name
 mlx_img_ctx_s	libft/minilibx/mlx_int.h	/^typedef struct	mlx_img_ctx_s$/;"	s
 mlx_img_ctx_t	libft/minilibx/mlx_int.h	/^} mlx_img_ctx_t;$/;"	t	typeref:struct:mlx_img_ctx_s
