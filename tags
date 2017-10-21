@@ -44,7 +44,7 @@ COLORMAPCHANGEMASK	libft/includes/libft_define.h	/^# define COLORMAPCHANGEMASK	/
 CTRL	libft/includes/libft_define.h	/^# define CTRL	/;"	d
 CTYPEPATH	libft/Makefile	/^CTYPEPATH = ctype\/$/;"	m
 C_KEY	libft/includes/libft_define.h	/^# define C_KEY	/;"	d
-DEBUG	Makefile	/^DEBUG		=	-g3$/;"	m
+DEBUG	Makefile	/^DEBUG		=	-g3 -fsanitize=address$/;"	m
 DEBUG	libft/Makefile	/^DEBUG	=	-g3 -fsanitize=address$/;"	m
 DOT_KEY	libft/includes/libft_define.h	/^# define DOT_KEY	/;"	d
 DOWN	libft/includes/libft_define.h	/^# define DOWN	/;"	d
@@ -256,8 +256,9 @@ ft_lsR	srcs/ft_lsR.c	/^void		ft_lsR(t_arg arg, t_obj *files)$/;"	f
 ft_lsRprocess	srcs/ft_lsR.c	/^void	ft_lsRprocess(t_arg arg, char *path)$/;"	f
 ft_lsbasicdisplay	srcs/ft_lsoutput.c	/^void			ft_lsbasicdisplay(t_arg arg, t_obj *files)$/;"	f
 ft_lscpyobj	srcs/utils.c	/^void		ft_lscpyobj(t_obj **objs, t_obj *to_cpy)$/;"	f
-ft_lsdelobj	srcs/ft_lsdel.c	/^void			ft_lsdelobj(t_obj **alst)$/;"	f
-ft_lsdelpath	srcs/ft_lsdel.c	/^void			ft_lsdelpath(void *path, size_t size)$/;"	f
+ft_lsdelobj	srcs/ft_lsdel.c	/^void		ft_lsdelobj(t_obj **alst)$/;"	f
+ft_lsdelobjdisplay	srcs/ft_lsdel.c	/^void		ft_lsdelobjdisplay(t_obj **alst)$/;"	f
+ft_lsdelpath	srcs/ft_lsdel.c	/^void		ft_lsdelpath(void *path, size_t size)$/;"	f
 ft_lsdir	srcs/ft_lsprocess.c	/^static void	ft_lsdir(t_arg arg, t_list *list, int end_dir)$/;"	f	file:
 ft_lsdisp_usrgrp_size	srcs/ft_lslongsize.c	/^void				ft_lsdisp_usrgrp_size(t_disp_size *size, t_obj *current)$/;"	f
 ft_lsdisplay	srcs/ft_lsoutput.c	/^void			ft_lsdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f

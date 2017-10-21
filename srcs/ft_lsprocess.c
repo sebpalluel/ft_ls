@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:56:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/20 17:21:27 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/21 16:40:05 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,12 @@ static void	ft_lsdir(t_arg arg, t_list *list, int end_dir)
 	}
 	dirs = ft_lsorganizeobjs(dirs, arg);
 	ft_lsinsidedirs(arg, dirs, end_dir);
-	ft_lstdel(&list, ft_lsdelpath);
 }
 
 static void	ft_lsfile(t_arg arg, t_list *list)
 {
 	t_list	*current;
 	t_obj	*files;
-	//t_list	*first_file;
 
 	current = list;
 	files = NULL;
@@ -79,11 +77,7 @@ static void	ft_lsfile(t_arg arg, t_list *list)
 		current = current->next;
 	}
 	if (files)
-	{
 		ft_lsdisplay(arg, files, 0);
-		ft_lsdelobj(&files);
-	}
-	ft_lstdel(&list, ft_lsdelpath);
 }
 
 void		ft_lsprocess(t_arg arg, t_list *list, int end_dir)
@@ -112,4 +106,6 @@ void		ft_lsprocess(t_arg arg, t_list *list, int end_dir)
 	file ? ft_lsfile(arg, file) : NULL;
 	(file && directory) ? ft_putchar('\n') : NULL;
 	directory ? ft_lsdir(arg, directory, end_dir) : NULL;
+	ft_lstdel(&file, ft_lsdelpath);
+	ft_lstdel(&directory, ft_lsdelpath);
 }
