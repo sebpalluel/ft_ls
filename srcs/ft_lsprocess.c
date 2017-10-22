@@ -6,43 +6,49 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:56:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/21 18:16:33 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/22 16:58:08 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/ft_ls.h"
 
-static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)
+static void	ft_dirlistprocess(t_arg arg, t_obj *dirlist, int multidir, \
+		int first)
 {
-	DIR		*dir;
-	t_obj	*files;
-	t_obj	*head;
-	int		first;
-	char	*tmp;
+	DIR		*dir; //
+	t_obj	*files; //
+	char	*tmp; //
 
-	first = 0;
 	files = NULL;
 	tmp = NULL;
+	dir = opendir(dirlist->name);
+	while (ft_lsgetobjsindir(&files, readdir(dir), \
+				ft_strjoin(dirlist->path, "/"), arg) != 0)
+		;
+	closedir(dir);
+	if (files)
+	{
+		first == 1 ? ft_putchar('\n') : NULL;
+		if (multidir)
+		{
+			ft_putendl((tmp = ft_strjoin(dirlist->name, ":")));
+			free(tmp);
+		}
+		first = 1;
+		ft_lsdisplay(arg, files, 1);
+	}
+}
+
+static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)
+{
+	t_obj	*head;
+	int		first;
+
+	first = 0;
 	head = dirlist;
 	while (dirlist)
 	{
-		dir = opendir(dirlist->name);
-		while (ft_lsgetobjsindir(&files, readdir(dir), \
-					ft_strjoin(dirlist->path, "/"), arg) != 0)
-			;
-		closedir(dir);
-		if (files)
-		{
-			first == 1 ? ft_putchar('\n') : NULL;
-			if (multidir)
-			{
-				ft_putendl((tmp = ft_strjoin(dirlist->name, ":")));
-				free(tmp);
-			}
-			first = 1;
-			ft_lsdisplay(arg, files, 1);
-		}
-		files = NULL;
+		ft_dirlistprocess(arg, dirlist, multidir, first);
 		dirlist = dirlist->next;
 	}
 	ft_lsdelobj(&head);

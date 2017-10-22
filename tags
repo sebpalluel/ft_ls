@@ -219,6 +219,7 @@ ft_colornew	libft/srcs/gfx/ft_colornew.c	/^t_color			*ft_colornew(unsigned char 
 ft_colorparse	libft/srcs/gfx/ft_colorparse.c	/^t_color		*ft_colorparse(char *arg)$/;"	f
 ft_colortohex	libft/srcs/gfx/ft_colortohex.c	/^int			ft_colortohex(t_color *col)$/;"	f
 ft_create_file	libft/srcs/fd/ft_create_file.c	/^size_t		ft_create_file(t_fd *fd, int chmod)$/;"	f
+ft_dirlistprocess	srcs/ft_lsprocess.c	/^static void	ft_dirlistprocess(t_arg arg, t_obj *dirlist, int multidir, \\$/;"	f	file:
 ft_error_arg	srcs/ft_ls.c	/^static void		ft_error_arg(char arg)$/;"	f	file:
 ft_fd_delete	libft/srcs/fd/ft_fd_delete.c	/^void		ft_fd_delete(t_fd *fd)$/;"	f
 ft_flipcolumn	libft/srcs/tab/ft_v_flip.c	/^static void	ft_flipcolumn(void **array, size_t column, size_t rows,\\$/;"	f	file:
@@ -370,7 +371,7 @@ ft_strlen	libft/srcs/str/ft_strlen.c	/^size_t		ft_strlen(const char *str)$/;"	f
 ft_strmap	libft/srcs/str/ft_strmap.c	/^char	*ft_strmap(char const *s, char (*f)(char))$/;"	f
 ft_strmapi	libft/srcs/str/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
 ft_strncat	libft/srcs/str/ft_strncat.c	/^char	*ft_strncat(char *dest, const char *src, size_t n)$/;"	f
-ft_strncmp	libft/srcs/str/ft_strncmp.c	/^size_t		ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f
+ft_strncmp	libft/srcs/str/ft_strncmp.c	/^int			ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f
 ft_strncpy	libft/srcs/str/ft_strncpy.c	/^char	*ft_strncpy(char *dest, const char *src, size_t n)$/;"	f
 ft_strnequ	libft/srcs/str/ft_strnequ.c	/^int		ft_strnequ(char const *s1, char const *s2, size_t n)$/;"	f
 ft_strnew	libft/srcs/str/ft_strnew.c	/^char	*ft_strnew(size_t size)$/;"	f
