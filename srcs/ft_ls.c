@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 15:37:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/21 16:45:23 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/22 16:40:06 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void		ft_select_arg(t_arg *arg, char c_arg)
 		arg->g = 1;
 }
 
-static void		ft_get_arg(t_arg *arg, char *curr_arg)
+static void		ft_get_arg(t_arg *arg, char *curr_arg, size_t *double_dash)
 {
 	size_t		i;
 
@@ -48,6 +48,8 @@ static void		ft_get_arg(t_arg *arg, char *curr_arg)
 			ft_select_arg(arg, curr_arg[i]);
 		else
 			ft_error_arg(curr_arg[i]);
+		if (curr_arg[0] == '-' && curr_arg[1] == '-')
+			*double_dash = 1;
 	}
 }
 
@@ -55,14 +57,16 @@ static void		ft_parse_arg(int argc, char **argv, t_arg *arg, t_list **path)
 {
 	int			nb_arg;
 	char		*curr_arg;
+	size_t		double_dash;
 
 	nb_arg = -1;
+	double_dash = 0;
 	while (++nb_arg < (argc - 1))
 	{
 		curr_arg = argv[nb_arg + 1];
 		if (curr_arg && curr_arg[0] == '-' && \
-				curr_arg[1] != '\0')
-			ft_get_arg(arg, curr_arg);
+				curr_arg[1] != '\0' && !(double_dash && curr_arg[1] == '-'))
+			ft_get_arg(arg, curr_arg, &double_dash);
 		else
 			ft_lstpushback(path, curr_arg, ft_strlen(curr_arg) + 1);
 	}

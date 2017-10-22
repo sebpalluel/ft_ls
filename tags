@@ -224,7 +224,7 @@ ft_fd_delete	libft/srcs/fd/ft_fd_delete.c	/^void		ft_fd_delete(t_fd *fd)$/;"	f
 ft_flipcolumn	libft/srcs/tab/ft_v_flip.c	/^static void	ft_flipcolumn(void **array, size_t column, size_t rows,\\$/;"	f	file:
 ft_fliprow	libft/srcs/tab/ft_h_flip.c	/^static void	ft_fliprow(void *row, size_t columns, size_t nbytes)$/;"	f	file:
 ft_ftoa	libft/srcs/stdlib/ft_ftoa.c	/^char		*ft_ftoa(float f)$/;"	f
-ft_get_arg	srcs/ft_ls.c	/^static void		ft_get_arg(t_arg *arg, char *curr_arg)$/;"	f	file:
+ft_get_arg	srcs/ft_ls.c	/^static void		ft_get_arg(t_arg *arg, char *curr_arg, size_t *double_dash)$/;"	f	file:
 ft_get_max_size	srcs/ft_lslongsize.c	/^int					ft_get_max_size(int a, int b)$/;"	f
 ft_getnbr	libft/srcs/int/ft_getnbr.c	/^int		ft_getnbr(char *str)$/;"	f
 ft_h_flip	libft/srcs/tab/ft_h_flip.c	/^void		ft_h_flip(void **array, size_t columns, size_t rows, size_t nbytes)$/;"	f
