@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 14:25:34 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/21 20:10:56 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/22 15:02:08 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void		ft_color_mode(mode_t mode);
 t_disp_size	ft_lslongsize(t_arg arg, t_obj *files);
 void		ft_lsprintchmod(t_obj *obj);
 void		ft_lsprintfilemode(t_obj *obj);
-void		ft_lsprintint(int nlink, int space);
+void		ft_lsprintint(int num, int space);
 void		ft_lsprintstr(char *str, int space);
 void		ft_lsprintmajmin(t_obj *file, t_disp_size size);
 void		ft_lsR(t_arg arg, t_obj *files);

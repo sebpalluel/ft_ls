@@ -213,7 +213,7 @@ ft_checkhexa	libft/srcs/ctype/ft_checkhexa.c	/^int					ft_checkhexa(char *str)$/
 ft_checkint	libft/srcs/ctype/ft_checkint.c	/^int			ft_checkint(char *str)$/;"	f
 ft_close	libft/srcs/fd/ft_close.c	/^int	ft_close(t_fd *fd)$/;"	f
 ft_color	libft/srcs/gfx/ft_color.c	/^void	ft_color(t_color *clr, \\$/;"	f
-ft_color_mode	srcs/utils.c	/^void	ft_color_mode(mode_t mode)$/;"	f
+ft_color_mode	srcs/utils.c	/^void		ft_color_mode(mode_t mode)$/;"	f
 ft_colorcpy	libft/srcs/gfx/ft_colorcpy.c	/^void	ft_colorcpy(t_color *clr_from, t_color *clr_to)$/;"	f
 ft_colornew	libft/srcs/gfx/ft_colornew.c	/^t_color			*ft_colornew(unsigned char r, unsigned char g, \\$/;"	f
 ft_colorparse	libft/srcs/gfx/ft_colorparse.c	/^t_color		*ft_colorparse(char *arg)$/;"	f
@@ -276,7 +276,7 @@ ft_lsorderobjs	srcs/ft_lsorganize.c	/^static void	ft_lsorderobjs(t_obj **files, 
 ft_lsorganizeobjs	srcs/ft_lsorganize.c	/^t_obj		*ft_lsorganizeobjs(t_obj *files, t_arg arg)$/;"	f
 ft_lsprintchmod	srcs/ft_lsprint.c	/^void		ft_lsprintchmod(t_obj *obj)$/;"	f
 ft_lsprintfilemode	srcs/ft_lsprint.c	/^void		ft_lsprintfilemode(t_obj *obj)$/;"	f
-ft_lsprintint	srcs/ft_lsprint.c	/^void		ft_lsprintint(int nlink, int space)$/;"	f
+ft_lsprintint	srcs/ft_lsprint.c	/^void		ft_lsprintint(int num, int space)$/;"	f
 ft_lsprintmajmin	srcs/ft_lsprint.c	/^void		ft_lsprintmajmin(t_obj *file, t_disp_size size)$/;"	f
 ft_lsprintstr	srcs/ft_lsprint.c	/^void		ft_lsprintstr(char *str, int space)$/;"	f
 ft_lsprocess	srcs/ft_lsprocess.c	/^void		ft_lsprocess(t_arg arg, t_list *path, int end_dir)$/;"	f

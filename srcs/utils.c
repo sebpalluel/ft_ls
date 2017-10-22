@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/19 16:03:39 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/21 20:31:32 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/21 20:35:43 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void		ft_lsswapobj(t_obj **a, t_obj **b)
 	ft_lscpyobj(b, &tmp);
 }
 
-void	ft_color_mode(mode_t mode)
+void		ft_color_mode(mode_t mode)
 {
 	S_ISDIR(mode) ? ft_putstr(ANSI_BLUE) : NULL;
 	S_ISCHR(mode) ? ft_putstr(ANSI_YELLOW) : NULL;

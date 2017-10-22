@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/19 22:53:07 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/21 18:33:57 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/22 15:16:40 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,17 @@ void		ft_lsprintfilemode(t_obj *obj)
 	ft_putchar((S_ISSOCK(obj->st_mode)) ? 's' : '\0');
 }
 
-void		ft_lsprintint(int nlink, int space)
+void		ft_lsprintint(int num, int space)
 {
 	int		c;
 
-	c = space - ft_intlen(nlink);
+	c = space - ft_intlen(num);
 	while (c > 0)
 	{
 		ft_putchar(' ');
 		c--;
 	}
-	ft_putnbr(nlink);
+	ft_putnbr(num);
 	ft_putstr(" ");
 }
 
@@ -72,18 +72,18 @@ void		ft_lsprintmajmin(t_obj *file, t_disp_size size)
 
 	min = ft_intlen(file->min);
 	maj = ft_intlen(file->maj);
-	ft_putnbr(file->maj);
 	while (maj < size.maj)
 	{
 		ft_putchar(' ');
 		size.maj--;
 	}
+	ft_putnbr(file->maj);
 	ft_putstr(", ");
-	ft_putnbr(file->min);
 	while (min < size.min)
 	{
 		ft_putchar(' ');
 		size.min--;
 	}
+	ft_putnbr(file->min);
 	ft_putchar(' ');
 }
