@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:15:13 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/21 20:31:20 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/22 17:30:49 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ static t_obj	*ft_lsgetlink(t_obj *obj)
 	int			link_len;
 	char		*buf;
 
-	buf = ft_strnew(1024);
+	if (!(buf = ft_strnew(1024)))
+		return (NULL);
 	if ((link_len = readlink(obj->path, buf, 1024)) == -1)
 	{
 		ft_perror("ft_ls: ", obj->name, 1);

@@ -263,13 +263,13 @@ ft_lsdelpath	srcs/ft_lsdel.c	/^void		ft_lsdelpath(void *path, size_t size)$/;"	f
 ft_lsdir	srcs/ft_lsprocess.c	/^static void	ft_lsdir(t_arg arg, t_list *path, int end_dir)$/;"	f	file:
 ft_lsdisp_usrgrp_size	srcs/ft_lslongsize.c	/^void				ft_lsdisp_usrgrp_size(t_disp_size *size, t_obj *current)$/;"	f
 ft_lsdisplay	srcs/ft_lsoutput.c	/^void			ft_lsdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f
-ft_lsdisplaytime	srcs/ft_lsoutput.c	/^static void		ft_lsdisplaytime(time_t date, char *file_time, char *base_time)$/;"	f	file:
+ft_lsdisplaytime	srcs/ft_lsoutputtime.c	/^static void		ft_lsdisplaytime(time_t date, char *file_time, char *base_time)$/;"	f	file:
 ft_lsdispsize	srcs/ft_lslongsize.c	/^void				ft_lsdispsize(t_disp_size *size, t_obj *current)$/;"	f
 ft_lsfile	srcs/ft_lsprocess.c	/^static void	ft_lsfile(t_arg arg, t_list *path)$/;"	f	file:
 ft_lsgetfiles	srcs/ft_lsgetinfo.c	/^void			ft_lsgetfiles(t_obj **files, char *name, char *path, t_arg arg)$/;"	f
 ft_lsgetlink	srcs/ft_lsgetinfo.c	/^static t_obj	*ft_lsgetlink(t_obj *obj)$/;"	f	file:
 ft_lsgetobjsindir	srcs/ft_lsgetinfo.c	/^int				ft_lsgetobjsindir(t_obj **files, struct dirent *file, \\$/;"	f
-ft_lsgivetime	srcs/ft_lsoutput.c	/^static void		ft_lsgivetime(time_t date)$/;"	f	file:
+ft_lsgivetime	srcs/ft_lsoutputtime.c	/^void			ft_lsgivetime(time_t date)$/;"	f
 ft_lsinsidedirs	srcs/ft_lsprocess.c	/^static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)$/;"	f	file:
 ft_lslongdisplay	srcs/ft_lsoutput.c	/^void			ft_lslongdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f
 ft_lslongdisplayfile	srcs/ft_lsoutput.c	/^void			ft_lslongdisplayfile(t_arg arg, t_obj *current, \\$/;"	f

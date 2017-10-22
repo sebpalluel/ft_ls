@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 14:25:34 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/22 15:02:08 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/22 17:35:41 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ void		ft_lsprintmajmin(t_obj *file, t_disp_size size);
 void		ft_lsR(t_arg arg, t_obj *files);
 void		ft_lsdelpath(void *path, size_t size);
 void		ft_lsdelobj(t_obj **alst);
+void		ft_lsgivetime(time_t date);
 
 #endif

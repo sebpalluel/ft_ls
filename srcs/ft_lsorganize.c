@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:54:44 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/22 17:21:11 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/22 17:29:06 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void		ft_lsreverseorderobjs(t_obj **files)
 	while (prev_file)
 	{
 		next_file = prev_file->next;
-		while(next_file)
+		while (next_file)
 		{
 			ft_lsswapobj(&prev_file, &next_file);
 				next_file = next_file->next;
