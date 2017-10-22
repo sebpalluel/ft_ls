@@ -220,7 +220,7 @@ ft_colornew	libft/srcs/gfx/ft_colornew.c	/^t_color			*ft_colornew(unsigned char 
 ft_colorparse	libft/srcs/gfx/ft_colorparse.c	/^t_color		*ft_colorparse(char *arg)$/;"	f
 ft_colortohex	libft/srcs/gfx/ft_colortohex.c	/^int			ft_colortohex(t_color *col)$/;"	f
 ft_create_file	libft/srcs/fd/ft_create_file.c	/^size_t		ft_create_file(t_fd *fd, int chmod)$/;"	f
-ft_dirlistprocess	srcs/ft_lsprocess.c	/^static void	ft_dirlistprocess(t_arg arg, t_obj *dirlist, size_t mult_dir)$/;"	f	file:
+ft_dirlistprocess	srcs/ft_lsprocessdir.c	/^static void	ft_dirlistprocess(t_arg arg, t_obj *dirlist, size_t mult_dir)$/;"	f	file:
 ft_error_arg	srcs/ft_ls.c	/^static void		ft_error_arg(char arg)$/;"	f	file:
 ft_fd_delete	libft/srcs/fd/ft_fd_delete.c	/^void		ft_fd_delete(t_fd *fd)$/;"	f
 ft_flipcolumn	libft/srcs/tab/ft_v_flip.c	/^static void	ft_flipcolumn(void **array, size_t column, size_t rows,\\$/;"	f	file:
@@ -260,7 +260,7 @@ ft_lsbasicdisplay	srcs/ft_lsoutput.c	/^void			ft_lsbasicdisplay(t_arg arg, t_obj
 ft_lscpyobj	srcs/utils.c	/^void		ft_lscpyobj(t_obj **objs, t_obj *to_cpy)$/;"	f
 ft_lsdelobj	srcs/ft_lsdel.c	/^void		ft_lsdelobj(t_obj **alst)$/;"	f
 ft_lsdelpath	srcs/ft_lsdel.c	/^void		ft_lsdelpath(void *path, size_t size)$/;"	f
-ft_lsdir	srcs/ft_lsprocess.c	/^static void	ft_lsdir(t_arg arg, t_list *path, size_t mult_dir)$/;"	f	file:
+ft_lsdir	srcs/ft_lsprocessdir.c	/^void		ft_lsdir(t_arg arg, t_list *path, size_t mult_dir)$/;"	f
 ft_lsdirorfile	srcs/ft_lsprocess.c	/^static void	ft_lsdirorfile(t_list *current, t_list **file, t_list **directory)$/;"	f	file:
 ft_lsdisp_usrgrp_size	srcs/ft_lslongsize.c	/^void				ft_lsdisp_usrgrp_size(t_disp_size *size, t_obj *current)$/;"	f
 ft_lsdisplay	srcs/ft_lsoutput.c	/^void			ft_lsdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f
@@ -271,7 +271,7 @@ ft_lsgetfiles	srcs/ft_lsgetinfo.c	/^void			ft_lsgetfiles(t_obj **files, char *na
 ft_lsgetlink	srcs/ft_lsgetinfo.c	/^static t_obj	*ft_lsgetlink(t_obj *obj)$/;"	f	file:
 ft_lsgetobjsindir	srcs/ft_lsgetinfo.c	/^int				ft_lsgetobjsindir(t_obj **files, struct dirent *file, \\$/;"	f
 ft_lsgivetime	srcs/ft_lsoutputtime.c	/^void			ft_lsgivetime(time_t date)$/;"	f
-ft_lsinsidedirs	srcs/ft_lsprocess.c	/^static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, size_t mult_dir)$/;"	f	file:
+ft_lsinsidedirs	srcs/ft_lsprocessdir.c	/^static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, size_t mult_dir)$/;"	f	file:
 ft_lslongdisplay	srcs/ft_lsoutput.c	/^void			ft_lslongdisplay(t_arg arg, t_obj *files, int fileordir)$/;"	f
 ft_lslongdisplayfile	srcs/ft_lsoutput.c	/^void			ft_lslongdisplayfile(t_arg arg, t_obj *obj, \\$/;"	f
 ft_lslongdisplayfile2	srcs/ft_lsoutput.c	/^static void		ft_lslongdisplayfile2(t_obj *obj)$/;"	f	file:

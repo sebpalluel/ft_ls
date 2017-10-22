@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 15:37:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/22 19:36:32 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/22 19:40:41 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,5 @@ int				main(int argc, char **argv)
 		path = ft_lstnew(".", 1);
 	ft_lsprocess(arg, path, path->next != NULL ? 1 : 0);
 	ft_lstdel(&path, ft_lsdelpath);
-	while(42);
 	return (0);
 }
