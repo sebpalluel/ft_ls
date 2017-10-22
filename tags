@@ -197,6 +197,7 @@ custom	libft/srcs/fd/ft_create_file.c	/^static void	custom(char *command, char *
 date	includes/ft_ls_struct.h	/^	time_t			date;$/;"	m	struct:s_obj
 display_log	libft/minilibx/mlx_shaders.c	/^void display_log(GLuint object, void (*param_func)(), void (*getlog_func)())$/;"	f
 endian	libft/includes/libft_struct.h	/^	int				endian;$/;"	m	struct:s_img
+f	includes/ft_ls_struct.h	/^	int				f;$/;"	m	struct:s_arg
 fd	libft/includes/libft_struct.h	/^	int				fd;$/;"	m	struct:s_fd
 flags	libft/includes/libft_struct.h	/^	int				flags;$/;"	m	struct:s_fd
 font	libft/minilibx/mlx_int.h	/^  mlx_img_list_t	*font;$/;"	m	struct:mlx_ptr_s

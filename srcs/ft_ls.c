@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 15:37:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/22 16:41:12 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/22 17:21:09 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ static void		ft_select_arg(t_arg *arg, char c_arg)
 		arg->t = 1;
 	if (!arg->g && c_arg == 'g')
 		arg->g = 1;
+	if (!arg->g && c_arg == 'f')
+		arg->f = 1;
 }
 
 static void		ft_get_arg(t_arg *arg, char *curr_arg, size_t *double_dash)
