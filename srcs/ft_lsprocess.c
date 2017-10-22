@@ -6,18 +6,17 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:56:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/22 16:58:59 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/22 19:36:37 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/ft_ls.h"
 
-static void	ft_dirlistprocess(t_arg arg, t_obj *dirlist, int multidir, \
-		int first)
+static void	ft_dirlistprocess(t_arg arg, t_obj *dirlist, size_t mult_dir)
 {
-	DIR		*dir; //
-	t_obj	*files; //
-	char	*tmp; //
+	DIR		*dir;
+	t_obj	*files;
+	char	*tmp;
 
 	files = NULL;
 	tmp = NULL;
@@ -28,33 +27,30 @@ static void	ft_dirlistprocess(t_arg arg, t_obj *dirlist, int multidir, \
 	closedir(dir);
 	if (files)
 	{
-		first == 1 ? ft_putchar('\n') : NULL;
-		if (multidir)
+		if (mult_dir)
 		{
 			ft_putendl((tmp = ft_strjoin(dirlist->name, ":")));
 			free(tmp);
 		}
-		first = 1;
 		ft_lsdisplay(arg, files, 1);
 	}
 }
 
-static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, int multidir)
+static void	ft_lsinsidedirs(t_arg arg, t_obj *dirlist, size_t mult_dir)
 {
 	t_obj	*head;
-	int		first;
 
-	first = 0;
 	head = dirlist;
 	while (dirlist)
 	{
-		ft_dirlistprocess(arg, dirlist, multidir, first);
+		ft_dirlistprocess(arg, dirlist, mult_dir);
+		dirlist->next != NULL ? ft_putchar('\n') : NULL;
 		dirlist = dirlist->next;
 	}
 	ft_lsdelobj(&head);
 }
 
-static void	ft_lsdir(t_arg arg, t_list *path, int end_dir)
+static void	ft_lsdir(t_arg arg, t_list *path, size_t mult_dir)
 {
 	t_list	*current;
 	t_obj	*dirs;
@@ -67,7 +63,7 @@ static void	ft_lsdir(t_arg arg, t_list *path, int end_dir)
 		current = current->next;
 	}
 	dirs = ft_lsorganizeobjs(dirs, arg);
-	ft_lsinsidedirs(arg, dirs, end_dir);
+	ft_lsinsidedirs(arg, dirs, mult_dir);
 }
 
 static void	ft_lsfile(t_arg arg, t_list *path)
@@ -86,32 +82,38 @@ static void	ft_lsfile(t_arg arg, t_list *path)
 		ft_lsdisplay(arg, files, 0);
 }
 
-void		ft_lsprocess(t_arg arg, t_list *path, int end_dir)
+static void	ft_lsdirorfile(t_list *current, t_list **file, t_list **directory)
 {
-	DIR		*dir;
+	DIR		*dir;//
+
+	if ((dir = opendir(current->content)) == NULL)
+		errno != ENOTDIR ? ft_perror("ft_ls: ", current->content, 0) : \
+				 ft_lstpushback(file, current->content, current->content_size);
+	else
+	{
+		ft_lstpushback(directory, current->content, current->content_size);
+		if (closedir(dir) == -1)
+			ft_perror("ft_ls: ", current->content, 0);
+	}
+}
+
+void		ft_lsprocess(t_arg arg, t_list *path, size_t mult_dir)
+{
 	t_list	*file;
 	t_list	*directory;
 	t_list	*current;
 
 	file = NULL;
-	directory = NULL;
 	current = path;
+	directory = NULL;
 	while (current)
 	{
-		if ((dir = opendir(current->content)) == NULL)
-			errno != ENOTDIR ? ft_perror("ft_ls: ", current->content, 0) : \
-					 ft_lstpushback(&file, current->content, current->content_size);
-		else
-		{
-			ft_lstpushback(&directory, current->content, current->content_size);
-			if (closedir(dir) == -1)
-				ft_perror("ft_ls: ", current->content, 0);
-		}
+		ft_lsdirorfile(current, &file, &directory);
 		current = current->next;
 	}
 	file ? ft_lsfile(arg, file) : NULL;
 	(file && directory) ? ft_putchar('\n') : NULL;
-	directory ? ft_lsdir(arg, directory, end_dir) : NULL;
+	directory ? ft_lsdir(arg, directory, mult_dir) : NULL;
 	ft_lstdel(&file, ft_lsdelpath);
 	ft_lstdel(&directory, ft_lsdelpath);
 }

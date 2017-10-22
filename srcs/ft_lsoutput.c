@@ -6,46 +6,49 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:51:05 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/22 17:35:45 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/22 18:14:30 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/ft_ls.h"
 
-void			ft_lslongdisplayfile(t_arg arg, t_obj *current, \
-		t_disp_size size)
+static void		ft_lslongdisplayfile2(t_obj *obj)
 {
-	ft_lsprintfilemode(current);
-	ft_lsprintchmod(current);
-	ft_lsprintint(current->st_nlink, size.lnkspace);
-	if (arg.g == 0)
-	{
-		if (getpwuid(current->st_uid))
-			ft_lsprintstr(getpwuid(current->st_uid)->pw_name, size.usrspace);
-		else
-			ft_lsprintstr(ft_itoa(current->st_uid), size.usrspace);
-	}
-	if (getgrgid(current->st_gid))
-		ft_lsprintstr(getgrgid(current->st_gid)->gr_name, size.grpspace);
-	else
-		ft_lsprintstr(ft_itoa(current->st_gid), size.grpspace);
-	if (S_ISCHR(current->st_mode) || S_ISBLK(current->st_mode))
-	{
-		ft_lsprintmajmin(current, size);
-	}
-	else
-		ft_lsprintint(current->st_size, size.size);
-	ft_lsgivetime(current->date);
-	ft_color_mode(current->st_mode);
-	ft_putstr(current->name);
-	if (S_ISLNK(current->st_mode))
+	ft_lsgivetime(obj->date);
+	ft_color_mode(obj->st_mode);
+	ft_putstr(obj->name);
+	if (S_ISLNK(obj->st_mode))
 	{
 		ft_putstr(ANSI_RESET);
 		ft_putstr(" -> ");
-		ft_putstr(current->lnked_to);
+		ft_putstr(obj->lnked_to);
 	}
 	ft_putchar('\n');
 	ft_putstr(ANSI_RESET);
+}
+
+void			ft_lslongdisplayfile(t_arg arg, t_obj *obj, \
+		t_disp_size size)
+{
+	ft_lsprintfilemode(obj);
+	ft_lsprintchmod(obj);
+	ft_lsprintint(obj->st_nlink, size.lnkspace);
+	if (arg.g == 0)
+	{
+		if (getpwuid(obj->st_uid))
+			ft_lsprintstr(getpwuid(obj->st_uid)->pw_name, size.usrspace);
+		else
+			ft_lsprintstr(ft_itoa(obj->st_uid), size.usrspace);
+	}
+	if (getgrgid(obj->st_gid))
+		ft_lsprintstr(getgrgid(obj->st_gid)->gr_name, size.grpspace);
+	else
+		ft_lsprintstr(ft_itoa(obj->st_gid), size.grpspace);
+	if (S_ISCHR(obj->st_mode) || S_ISBLK(obj->st_mode))
+		ft_lsprintmajmin(obj, size);
+	else
+		ft_lsprintint(obj->st_size, size.size);
+	ft_lslongdisplayfile2(obj);
 }
 
 void			ft_lslongdisplay(t_arg arg, t_obj *files, int fileordir)
