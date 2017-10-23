@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:51:05 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/22 18:14:30 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/23 22:44:26 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void			ft_lsbasicdisplay(t_arg arg, t_obj *files)
 	current = files;
 	while (current)
 	{
-		if (!(arg.a == 0 && current->name[0] == '.'))
+		if (!(arg.a == 0 && arg.f == 0 && current->name[0] == '.'))
 		{
 			ft_color_mode(current->st_mode);
 			ft_putendl(current->name);

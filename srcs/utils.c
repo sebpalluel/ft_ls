@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/19 16:03:39 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/22 17:26:56 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/23 23:43:35 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,17 @@ int			ft_namecmp(t_obj *obj1, t_obj *obj2)
 
 int			ft_timecmp(t_obj *obj1, t_obj *obj2)
 {
-	return (obj1->date < obj2->date);
+	//int		time_diff;
+
+	//if (obj1->date.tm_mon)
+	if (obj1->date < obj2->date)
+	{
+	//	printf("obj1 name %s, date %ld, obj2 name %s, date %ld time_diff %d\n", \
+	//			obj1->name, obj1->date, obj2->name, obj2->date, time_diff);
+		return (1);
+	}
+	else
+		return (0);
 }
 
 void		ft_lscpyobj(t_obj **objs, t_obj *to_cpy)
