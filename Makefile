@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2017/10/04 01:30:27 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/10/23 21:21:38 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/10/23 21:50:10 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -28,7 +28,7 @@ LFTDIR =	./libft/
 INCDIR =	./includes/
 SRCDIR =	./srcs/
 
-OBJNAME =	$(SRC_NAME:.c=.o)
+OBJNAME =	$(SRCNAME:.c=.o)
 INCNAME =	ft_ls.h
 SRCNAME =	ft_ls.c \
 			ft_lsprocess.c \
@@ -45,16 +45,10 @@ SRCNAME =	ft_ls.c \
 
 SRC		= 	$(addprefix $(SRCDIR),$(SRCNAME))
 OBJ		= 	$(addprefix $(OBJDIR),$(OBJNAME))
-INC		= 	$(addprefix $(INCDIR),$(INCNAME))
+INC		= 	$(addprefix -I $(INCDIR),$(INCNAME))
 
 EXT		=	Makefile
 
-
-LIB_DIR		=	-L libft/
-LIBS		=	-lft
-
-
-#/////////////////////
 all: $(NAME)
 	
 $(NAME): $(OBJ)
@@ -66,14 +60,13 @@ $(NAME): $(OBJ)
 
 $(OBJDIR)%.o: $(SRCDIR)%.c
 		@mkdir -p $(OBJDIR) 2> /dev/null || true
-		#@$(CMP) -c -o $@ $< -I $(INC) $(FLAGS)
 		@$(CMP) $(FLAGS) $(INC) -o $@ -c $<
 		@echo -n .
 
 clean:
 		@make -C $(LFTDIR) clean
 		@rm -rf $(OBJDIR)
-		@echo "$(WAC)$(NAME):\t\tRemoving OBJ path: ./obj/$(NOC)"
+		@echo "$(WAC)$(NAME):\t\tRemoving OBJ dir: ./obj/$(NOC)"
 
 fclean: clean
 		@make -C $(LFTDIR) fclean
@@ -83,6 +76,9 @@ fclean: clean
 re: fclean all
 
 .PHONY: $(NAME) all clean fclean re
+
+#@$(CMP) -c -o $@ $< $(INC) $(FLAGS)
+
 #//////////////////
 #all : $(NAME)
 #$(NAME) :
