@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:51:05 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/23 22:44:26 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/23 23:59:13 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 static void		ft_lslongdisplayfile2(t_obj *obj)
 {
-	ft_lsgivetime(obj->date);
+	ft_putstr(obj->final_time);
+	ft_putchar(' ');
 	ft_color_mode(obj->st_mode);
 	ft_putstr(obj->name);
 	if (S_ISLNK(obj->st_mode))

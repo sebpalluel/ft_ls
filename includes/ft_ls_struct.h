@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 14:29:44 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/22 17:21:07 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/23 23:47:39 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ typedef struct		s_obj
 	long			maj;
 	long			min;
 	char			*lnked_to;
+	char			*final_time;
 	struct s_obj	*next;
 }					t_obj;
 

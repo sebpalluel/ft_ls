@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:15:13 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/23 23:45:03 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/24 02:04:08 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,8 @@ static t_obj	*ft_lsgetlink(t_obj *obj)
 	return (obj);
 }
 
-static t_obj	*ft_newobj(char *name, char *path, t_arg arg)
+static void		ft_newobjinfo(t_obj *obj, struct stat file_stat, t_arg arg)
 {
-	t_obj		*obj;
-	struct stat	file_stat;
-
-	obj = malloc(sizeof(t_obj));
-	obj->name = ft_strdup(name);
-	obj->path = ft_strjoin(path, name);
-	if (lstat(obj->path, &file_stat) == -1)
-	{
-		ft_perror("ft_ls: ", obj->name, 1);
-		return (NULL);
-	}
 	obj->date = (arg.u == 1 ? file_stat.st_atime : file_stat.st_mtime);
 	obj->st_mode = file_stat.st_mode;
 	obj->st_uid = file_stat.st_uid;
@@ -50,8 +39,27 @@ static t_obj	*ft_newobj(char *name, char *path, t_arg arg)
 	obj->st_size = file_stat.st_size;
 	obj->maj = major(file_stat.st_rdev);
 	obj->min = minor(file_stat.st_rdev);
+}
+
+static t_obj	*ft_newobj(char *name, char *path, t_arg arg)
+{
+	t_obj		*obj;
+	struct stat	file_stat;
+
+	if (!(obj = malloc(sizeof(t_obj))))
+		return (NULL);
+	obj->name = ft_strdup(name);
+	obj->path = ft_strjoin(path, name);
+	if (!name || !path || lstat(obj->path, &file_stat) == -1)
+	{
+		ft_perror("ft_ls: ", obj->name, 1);
+		return (NULL);
+	}
+	ft_newobjinfo(obj, file_stat, arg);
 	if (S_ISLNK(obj->st_mode) && !(obj = ft_lsgetlink(obj)))
 		return (NULL);
+	if (!(obj->final_time = ft_lsgivetime(obj->date)))
+		return(NULL);
 	obj->next = NULL;
 	return (obj);
 }

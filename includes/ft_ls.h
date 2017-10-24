@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 14:25:34 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/23 22:00:55 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/24 00:43:10 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void		ft_lsdisplay(t_arg arg, t_obj *files, int fileordir);
 t_obj		*ft_lsorganizeobjs(t_obj *list, t_arg arg);
 int			ft_namecmp(t_obj *obj1, t_obj *obj2);
 int			ft_timecmp(t_obj *obj1, t_obj *obj2);
+int			ft_namebytime(t_obj *obj1, t_obj *obj2);
+char		*ft_lsgivetime(time_t date);
 void		ft_lscpyobj(t_obj **objs, t_obj *to_cpy);
 void		ft_lsswapobj(t_obj **a, t_obj **b);
 void		ft_color_mode(mode_t mode);
@@ -42,6 +44,5 @@ void		ft_lsprintmajmin(t_obj *file, t_disp_size size);
 void		ft_lsR(t_arg arg, t_obj *files);
 void		ft_lsdelpath(void *path, size_t size);
 void		ft_lsdelobj(t_obj **alst);
-void		ft_lsgivetime(time_t date);
 
 #endif

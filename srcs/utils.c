@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/19 16:03:39 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/23 23:43:35 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/24 02:26:52 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,18 @@ int			ft_namecmp(t_obj *obj1, t_obj *obj2)
 	return (ft_strcmp(obj1->name, obj2->name));
 }
 
+int			ft_namebytime(t_obj *obj1, t_obj *obj2)
+{
+	if (ft_strcmp(obj1->final_time, obj2->final_time) == 0)
+		return(ft_namecmp(obj1, obj2));
+	return (0);
+}
+
 int			ft_timecmp(t_obj *obj1, t_obj *obj2)
 {
-	//int		time_diff;
 
-	//if (obj1->date.tm_mon)
 	if (obj1->date < obj2->date)
-	{
-	//	printf("obj1 name %s, date %ld, obj2 name %s, date %ld time_diff %d\n", \
-	//			obj1->name, obj1->date, obj2->name, obj2->date, time_diff);
-		return (1);
-	}
+		return (obj1->date < obj2->date);
 	else
 		return (0);
 }
@@ -47,6 +48,7 @@ void		ft_lscpyobj(t_obj **objs, t_obj *to_cpy)
 	(*objs)->maj = to_cpy->maj;
 	(*objs)->min = to_cpy->min;
 	(*objs)->lnked_to = to_cpy->lnked_to;
+	(*objs)->final_time = to_cpy->final_time;
 }
 
 void		ft_lsswapobj(t_obj **a, t_obj **b)
