@@ -6,11 +6,11 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:15:13 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/24 02:04:08 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/25 10:51:19 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/ft_ls.h"
+#include "../includes/ft_ls.h"
 
 static t_obj	*ft_lsgetlink(t_obj *obj)
 {
@@ -59,7 +59,7 @@ static t_obj	*ft_newobj(char *name, char *path, t_arg arg)
 	if (S_ISLNK(obj->st_mode) && !(obj = ft_lsgetlink(obj)))
 		return (NULL);
 	if (!(obj->final_time = ft_lsgivetime(obj->date)))
-		return(NULL);
+		return (NULL);
 	obj->next = NULL;
 	return (obj);
 }

@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 14:25:34 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/24 00:43:10 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/25 10:41:00 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void		ft_lsprintfilemode(t_obj *obj);
 void		ft_lsprintint(int num, int space);
 void		ft_lsprintstr(char *str, int space);
 void		ft_lsprintmajmin(t_obj *file, t_disp_size size);
-void		ft_lsR(t_arg arg, t_obj *files);
+void		ft_lsrecurse(t_arg arg, t_obj *files);
 void		ft_lsdelpath(void *path, size_t size);
 void		ft_lsdelobj(t_obj **alst);
 

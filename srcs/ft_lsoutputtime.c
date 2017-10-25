@@ -6,11 +6,11 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/22 17:34:33 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/24 00:12:14 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/25 11:19:01 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/ft_ls.h"
+#include "../includes/ft_ls.h"
 
 static char		*ft_lsgetfinaltime(time_t date, char *file_time, \
 		char *base_time)
@@ -50,5 +50,3 @@ char			*ft_lsgivetime(time_t date)
 	free(base_time);
 	return (final_time);
 }
-
-

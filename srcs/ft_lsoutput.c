@@ -6,11 +6,11 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:51:05 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/23 23:59:13 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/25 11:18:28 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/ft_ls.h"
+#include "../includes/ft_ls.h"
 
 static void		ft_lslongdisplayfile2(t_obj *obj)
 {
@@ -98,6 +98,6 @@ void			ft_lsdisplay(t_arg arg, t_obj *files, int fileordir)
 	current = ft_lsorganizeobjs(current, arg);
 	(arg.l == 1) ? ft_lslongdisplay(arg, current, fileordir) : \
 			ft_lsbasicdisplay(arg, current);
-	arg.R == 1 ? ft_lsR(arg, current) : NULL;
+	arg.recurse == 1 ? ft_lsrecurse(arg, current) : NULL;
 	ft_lsdelobj(&files);
 }

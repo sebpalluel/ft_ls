@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2017/10/04 01:30:27 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/10/24 14:59:46 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/10/25 10:42:16 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -42,7 +42,7 @@ SRCNAME		=		ft_ls.c \
 					ft_lsgetinfo.c \
 					ft_lslongsize.c \
 					ft_lsprint.c \
-					ft_lsR.c \
+					ft_lsrecurse.c \
 					ft_lsdel.c \
 					utils.c
 

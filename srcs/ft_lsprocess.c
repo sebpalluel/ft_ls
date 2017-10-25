@@ -6,11 +6,11 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 18:56:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/22 19:40:45 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/25 11:19:58 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/ft_ls.h"
+#include "../includes/ft_ls.h"
 
 static void	ft_lsfile(t_arg arg, t_list *path)
 {
@@ -34,7 +34,7 @@ static void	ft_lsdirorfile(t_list *current, t_list **file, t_list **directory)
 
 	if ((dir = opendir(current->content)) == NULL)
 		errno != ENOTDIR ? ft_perror("ft_ls: ", current->content, 0) : \
-				 ft_lstpushback(file, current->content, current->content_size);
+				ft_lstpushback(file, current->content, current->content_size);
 	else
 	{
 		ft_lstpushback(directory, current->content, current->content_size);

@@ -6,11 +6,11 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/22 18:57:07 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/24 01:55:20 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/25 11:20:11 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/ft_ls.h"
+#include "../includes/ft_ls.h"
 
 static void	ft_dirlistprocess(t_arg arg, t_obj *dirlist, size_t mult_dir)
 {

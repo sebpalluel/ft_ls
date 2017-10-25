@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 14:29:44 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/23 23:47:39 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/25 10:42:52 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef struct		s_disp_size
 typedef struct		s_arg
 {
 	int				l;
-	int				R;
+	int				recurse;
 	int				a;
 	int				r;
 	int				t;

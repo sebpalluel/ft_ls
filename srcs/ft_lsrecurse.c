@@ -6,13 +6,13 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 01:39:04 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/24 02:26:55 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/25 11:22:52 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/ft_ls.h"
+#include "../includes/ft_ls.h"
 
-void	ft_lsRprocess(t_arg arg, char *path)
+void		ft_lsrecurseprocess(t_arg arg, char *path)
 {
 	t_obj	*files;
 	DIR		*dir;
@@ -34,7 +34,7 @@ void	ft_lsRprocess(t_arg arg, char *path)
 		ft_perror("ft_ls: ", path, 0);
 }
 
-void		ft_lsR(t_arg arg, t_obj *files)
+void		ft_lsrecurse(t_arg arg, t_obj *files)
 {
 	t_obj	*current;
 
@@ -46,7 +46,7 @@ void		ft_lsR(t_arg arg, t_obj *files)
 				ft_strcmp(".", current->name) && \
 				ft_strcmp("..", current->name) && \
 				!(arg.a == 0 && current->name[0] == '.'))
-			ft_lsRprocess(arg, current->path);
+			ft_lsrecurseprocess(arg, current->path);
 		current = current->next;
 	}
 }

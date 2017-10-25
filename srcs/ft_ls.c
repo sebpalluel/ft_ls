@@ -6,11 +6,11 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 15:37:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/24 15:02:57 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/25 10:48:49 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/ft_ls.h"
+#include "../includes/ft_ls.h"
 
 static void		ft_error_arg(char arg)
 {
@@ -24,8 +24,8 @@ static void		ft_select_arg(t_arg *arg, char c_arg)
 {
 	if (!arg->l && c_arg == 'l')
 		arg->l = 1;
-	if (!arg->R && c_arg == 'R')
-		arg->R = 1;
+	if (!arg->recurse && c_arg == 'R')
+		arg->recurse = 1;
 	if (!arg->a && c_arg == 'a')
 		arg->a = 1;
 	if (!arg->r && c_arg == 'r')
