@@ -6,11 +6,11 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/19 22:53:07 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/22 18:15:30 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/25 11:19:07 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/ft_ls.h"
+#include "../includes/ft_ls.h"
 
 void		ft_lsprintchmod(t_obj *obj)
 {

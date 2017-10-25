@@ -6,11 +6,11 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/19 18:10:39 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/22 17:32:41 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/25 10:52:08 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/ft_ls.h"
+#include "../includes/ft_ls.h"
 
 int					ft_get_max_size(int a, int b)
 {
@@ -23,7 +23,7 @@ int					ft_get_max_size(int a, int b)
 void				ft_lsdisp_usrgrp_size(t_disp_size *size, t_obj *current)
 {
 	struct passwd	*pws;
-	struct group 	*grp;
+	struct group	*grp;
 
 	pws = getpwuid(current->st_uid) ? getpwuid(current->st_uid) : NULL;
 	if (pws != NULL)
@@ -57,7 +57,7 @@ void				ft_lsdispsize(t_disp_size *size, t_obj *current)
 	if (ft_strncmp("/dev/", current->path, 4) == OK && \
 			(S_ISLNK(current->st_mode) || S_ISDIR(current->st_mode)))
 	{
-		if(ft_strncmp("/dev/fd/", current->path, 8) == OK)
+		if (ft_strncmp("/dev/fd/", current->path, 8) == OK)
 			size->size = 5;
 		else
 			size->size = 7;

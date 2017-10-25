@@ -6,27 +6,19 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/19 16:03:39 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/24 02:26:52 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/25 11:22:03 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/ft_ls.h"
+#include "../includes/ft_ls.h"
 
 int			ft_namecmp(t_obj *obj1, t_obj *obj2)
 {
 	return (ft_strcmp(obj1->name, obj2->name));
 }
 
-int			ft_namebytime(t_obj *obj1, t_obj *obj2)
-{
-	if (ft_strcmp(obj1->final_time, obj2->final_time) == 0)
-		return(ft_namecmp(obj1, obj2));
-	return (0);
-}
-
 int			ft_timecmp(t_obj *obj1, t_obj *obj2)
 {
-
 	if (obj1->date < obj2->date)
 		return (obj1->date < obj2->date);
 	else

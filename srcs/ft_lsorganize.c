@@ -6,11 +6,11 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 19:54:44 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/24 02:26:12 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/25 11:18:04 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/ft_ls.h"
+#include "../includes/ft_ls.h"
 
 void		ft_lsreverseorderobjs(t_obj **files)
 {
@@ -39,7 +39,7 @@ static void	ft_lsbubblesortobjs(t_obj **files, \
 
 	lptr = NULL;
 	swapped = 1;
-	while (swapped) 
+	while (swapped)
 	{
 		swapped = 0;
 		obj = *files;
