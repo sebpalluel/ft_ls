@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/10/25 12:43:05 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/10/25 12:48:25 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -33,6 +33,10 @@ PERSOPATH = perso/
 INTPATH = int/
 TABPATH = tab/
 PRINTPATH = print/
+<<<<<<< HEAD
+=======
+GFXPATH = gfx/
+>>>>>>> 8926d0eaa0b76f4077774b8d54eb889d20d860e7
 RANDPATH = rand/
 FDPATH = fd/
 
@@ -145,6 +149,41 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(PRINTPATH)ft_printintarray.c\
 			$(PRINTPATH)ft_printsize_tarray.c\
 			$(PRINTPATH)ft_printstrarray.c\
+<<<<<<< HEAD
+=======
+			$(GFXPATH)ft_colorcpy.c\
+			$(GFXPATH)ft_color.c\
+			$(GFXPATH)ft_colornew.c\
+			$(GFXPATH)ft_colorparse.c\
+			$(GFXPATH)ft_hextocolor.c\
+			$(GFXPATH)ft_hexcolor.c\
+			$(GFXPATH)ft_colortohex.c\
+			$(GFXPATH)ft_mlxdelete.c\
+			$(GFXPATH)ft_imgclean.c\
+			$(GFXPATH)ft_imgdel.c\
+			$(GFXPATH)ft_imgnew.c\
+			$(GFXPATH)ft_xmpnew.c\
+			$(GFXPATH)ft_initwindow.c\
+			$(GFXPATH)ft_matrixadd.c\
+			$(GFXPATH)ft_matrixhomothety.c\
+			$(GFXPATH)ft_matrixmult.c\
+			$(GFXPATH)ft_matrixonpoint.c\
+			$(GFXPATH)ft_matrixrotx.c\
+			$(GFXPATH)ft_matrixroty.c\
+			$(GFXPATH)ft_matrixrotz.c\
+			$(GFXPATH)ft_matrixtranslate.c\
+			$(GFXPATH)ft_matrixzero.c\
+			$(GFXPATH)ft_pixcpy.c\
+			$(GFXPATH)ft_pixnew.c\
+			$(GFXPATH)ft_pixpopulate.c\
+			$(GFXPATH)ft_vec3cpy.c\
+			$(GFXPATH)ft_vec3new.c\
+			$(GFXPATH)ft_vec3populate.c\
+			$(GFXPATH)ft_mlx_keytoint.c\
+			$(GFXPATH)ft_mlx_keytonumchar.c\
+			$(GFXPATH)ft_mlx_keytoletterchar.c\
+			$(GFXPATH)ft_mlx_printkeytochar.c\
+>>>>>>> 8926d0eaa0b76f4077774b8d54eb889d20d860e7
 			$(RANDPATH)ft_hash.c\
 			$(RANDPATH)ft_hash32.c\
 			$(RANDPATH)ft_rand.c\
