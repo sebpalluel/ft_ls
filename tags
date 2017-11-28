@@ -76,7 +76,6 @@ FT_LS_DEFINE_H	includes/ft_ls_define.h	/^# define FT_LS_DEFINE_H$/;"	d
 FT_LS_H	includes/ft_ls.h	/^# define FT_LS_H$/;"	d
 FT_LS_STRUCT_H	includes/ft_ls_struct.h	/^# define FT_LS_STRUCT_H$/;"	d
 F_KEY	libft/includes/libft_define.h	/^# define F_KEY	/;"	d
-GFXPATH	libft/Makefile	/^GFXPATH = gfx\/$/;"	m
 G_KEY	libft/includes/libft_define.h	/^# define G_KEY	/;"	d
 H_KEY	libft/includes/libft_define.h	/^# define H_KEY	/;"	d
 INC	Makefile	/^INC		= 	$(addprefix -I,$(INCDIR),$(INCNAME))$/;"	m
@@ -208,12 +207,7 @@ ft_checkdigit	libft/srcs/ctype/ft_checkdigit.c	/^int			ft_checkdigit(char *str)$
 ft_checkhexa	libft/srcs/ctype/ft_checkhexa.c	/^int					ft_checkhexa(char *str)$/;"	f
 ft_checkint	libft/srcs/ctype/ft_checkint.c	/^int			ft_checkint(char *str)$/;"	f
 ft_close	libft/srcs/fd/ft_close.c	/^int	ft_close(t_fd *fd)$/;"	f
-ft_color	libft/srcs/gfx/ft_color.c	/^void	ft_color(t_color *clr, \\$/;"	f
 ft_color_mode	srcs/utils.c	/^void		ft_color_mode(mode_t mode)$/;"	f
-ft_colorcpy	libft/srcs/gfx/ft_colorcpy.c	/^void	ft_colorcpy(t_color *clr_from, t_color *clr_to)$/;"	f
-ft_colornew	libft/srcs/gfx/ft_colornew.c	/^t_color			*ft_colornew(unsigned char r, unsigned char g, \\$/;"	f
-ft_colorparse	libft/srcs/gfx/ft_colorparse.c	/^t_color		*ft_colorparse(char *arg)$/;"	f
-ft_colortohex	libft/srcs/gfx/ft_colortohex.c	/^int			ft_colortohex(t_color *col)$/;"	f
 ft_create_file	libft/srcs/fd/ft_create_file.c	/^size_t		ft_create_file(t_fd *fd, int chmod)$/;"	f
 ft_dirlistprocess	srcs/ft_lsprocessdir.c	/^static void	ft_dirlistprocess(t_arg arg, t_obj *dirlist, size_t mult_dir)$/;"	f	file:
 ft_error_arg	srcs/ft_ls.c	/^static void		ft_error_arg(char arg)$/;"	f	file:
@@ -227,12 +221,6 @@ ft_getnbr	libft/srcs/int/ft_getnbr.c	/^int		ft_getnbr(char *str)$/;"	f
 ft_h_flip	libft/srcs/tab/ft_h_flip.c	/^void		ft_h_flip(void **array, size_t columns, size_t rows, size_t nbytes)$/;"	f
 ft_hash	libft/srcs/rand/ft_hash.c	/^unsigned long		ft_hash(unsigned char *str)$/;"	f
 ft_hash32	libft/srcs/rand/ft_hash32.c	/^uint32_t	ft_hash32(uint32_t val)$/;"	f
-ft_hexcolor	libft/srcs/gfx/ft_hexcolor.c	/^t_color			*ft_hexcolor(int hexvalue)$/;"	f
-ft_hextocolor	libft/srcs/gfx/ft_hextocolor.c	/^void			ft_hextocolor(t_color *col, int hexvalue)$/;"	f
-ft_imgclean	libft/srcs/gfx/ft_imgclean.c	/^void				ft_imgclean(t_img *img, size_t width, size_t height)$/;"	f
-ft_imgdel	libft/srcs/gfx/ft_imgdel.c	/^void			ft_imgdel(t_img *img, void *mlx)$/;"	f
-ft_imgnew	libft/srcs/gfx/ft_imgnew.c	/^t_img				*ft_imgnew(void *mlx, size_t x, size_t y)$/;"	f
-ft_initwindow	libft/srcs/gfx/ft_initwindow.c	/^t_mlx		*ft_initwindow(char *name, size_t width, size_t height)$/;"	f
 ft_intdup	libft/srcs/int/ft_intdup.c	/^int			*ft_intdup(int *array, size_t width)$/;"	f
 ft_intlen	libft/srcs/int/ft_intlen.c	/^size_t	ft_intlen(int nbr)$/;"	f
 ft_intmax	libft/srcs/int/ft_intmax.c	/^int		ft_intmax(int *array, size_t size)$/;"	f
@@ -295,15 +283,6 @@ ft_lstnew	libft/srcs/list/ft_lstnew.c	/^t_list		*ft_lstnew(void const *content, 
 ft_lstpushback	libft/srcs/list/ft_lstpushback.c	/^t_list		*ft_lstpushback(t_list **alst, void *data, size_t content_size)$/;"	f
 ft_lstpushfront	libft/srcs/list/ft_lstpushfront.c	/^t_list	*ft_lstpushfront(t_list **alst, void *data, size_t content_size)$/;"	f
 ft_lsttoarray	libft/srcs/list/ft_lsttoarray.c	/^void	**ft_lsttoarray(t_list *lst)$/;"	f
-ft_matrixadd	libft/srcs/gfx/ft_matrixadd.c	/^void		ft_matrixadd(double **mat, double **m, double **n, int size)$/;"	f
-ft_matrixhomothety	libft/srcs/gfx/ft_matrixhomothety.c	/^void		ft_matrixhomothety(double **mat, int factor)$/;"	f
-ft_matrixmult	libft/srcs/gfx/ft_matrixmult.c	/^void		ft_matrixmult(double **mat, double **m, double **n, int size)$/;"	f
-ft_matrixonpoint	libft/srcs/gfx/ft_matrixonpoint.c	/^void		ft_matrixonpoint(double **mat, t_vec3 *vec3)$/;"	f
-ft_matrixrotx	libft/srcs/gfx/ft_matrixrotx.c	/^void		ft_matrixrotx(double **mat, double deg)$/;"	f
-ft_matrixroty	libft/srcs/gfx/ft_matrixroty.c	/^void		ft_matrixroty(double **mat, double deg)$/;"	f
-ft_matrixrotz	libft/srcs/gfx/ft_matrixrotz.c	/^void		ft_matrixrotz(double **mat, double deg)$/;"	f
-ft_matrixtranslate	libft/srcs/gfx/ft_matrixtranslate.c	/^void		ft_matrixtranslate(double **mat, t_vec3 *vec)$/;"	f
-ft_matrixzero	libft/srcs/gfx/ft_matrixzero.c	/^double		**ft_matrixzero(int size)$/;"	f
 ft_memalloc	libft/srcs/mem/ft_memalloc.c	/^void	*ft_memalloc(size_t size)$/;"	f
 ft_memccpy	libft/srcs/mem/ft_memccpy.c	/^void	*ft_memccpy(void *dest, const void *src, int c, size_t n)$/;"	f
 ft_memchr	libft/srcs/mem/ft_memchr.c	/^void	*ft_memchr(const void *str, int c, size_t n)$/;"	f
@@ -314,22 +293,12 @@ ft_memdeltab	libft/srcs/mem/ft_memdeltab.c	/^void		ft_memdeltab(void *tab, size_
 ft_memdup	libft/srcs/mem/ft_memdup.c	/^void		*ft_memdup(const void *mem, size_t size)$/;"	f
 ft_memmove	libft/srcs/mem/ft_memmove.c	/^void	*ft_memmove(void *dest, const void *src, size_t n)$/;"	f
 ft_memset	libft/srcs/mem/ft_memset.c	/^void	*ft_memset(void *str, int c, size_t n)$/;"	f
-ft_mlx_keytoint	libft/srcs/gfx/ft_mlx_keytoint.c	/^int			ft_mlx_keytoint(int keycode)$/;"	f
-ft_mlx_keytoletterchar	libft/srcs/gfx/ft_mlx_keytoletterchar.c	/^char		ft_mlx_keytoletterchar(int keycode)$/;"	f
-ft_mlx_keytoletterchar2	libft/srcs/gfx/ft_mlx_keytoletterchar.c	/^static char	ft_mlx_keytoletterchar2(int keycode)$/;"	f	file:
-ft_mlx_keytoletterchar3	libft/srcs/gfx/ft_mlx_keytoletterchar.c	/^static char	ft_mlx_keytoletterchar3(int keycode)$/;"	f	file:
-ft_mlx_keytonumchar	libft/srcs/gfx/ft_mlx_keytonumchar.c	/^char		ft_mlx_keytonumchar(int keycode)$/;"	f
-ft_mlx_printkeytochar	libft/srcs/gfx/ft_mlx_printkeytochar.c	/^char		ft_mlx_printkeytochar(int keycode)$/;"	f
-ft_mlxdelete	libft/srcs/gfx/ft_mlxdelete.c	/^void		ft_mlxdelete(t_mlx *mlx, t_img *img)$/;"	f
 ft_namecmp	srcs/utils.c	/^int			ft_namecmp(t_obj *obj1, t_obj *obj2)$/;"	f
 ft_newobj	srcs/ft_lsgetinfo.c	/^static t_obj	*ft_newobj(char *name, char *path, t_arg arg)$/;"	f	file:
 ft_newobjinfo	srcs/ft_lsgetinfo.c	/^static void		ft_newobjinfo(t_obj *obj, struct stat file_stat, t_arg arg)$/;"	f	file:
 ft_open	libft/srcs/fd/ft_open.c	/^size_t		ft_open(t_fd *fd, int flags, int rights)$/;"	f
 ft_parse_arg	srcs/ft_ls.c	/^static void		ft_parse_arg(int argc, char **argv, t_arg *arg, t_list **path)$/;"	f	file:
 ft_perror	libft/srcs/perso/ft_perror.c	/^void	ft_perror(char *name, char *error, int exit_f)$/;"	f
-ft_pixcpy	libft/srcs/gfx/ft_pixcpy.c	/^void		ft_pixcpy(t_pix *pix_from, t_pix *pix_to)$/;"	f
-ft_pixnew	libft/srcs/gfx/ft_pixnew.c	/^t_pix		*ft_pixnew(int x, int y, int z)$/;"	f
-ft_pixpopulate	libft/srcs/gfx/ft_pixpopulate.c	/^void	ft_pixpopulate(t_pix *to_pix, int x, int y, int z)$/;"	f
 ft_pow	libft/srcs/math/ft_pow.c	/^int			ft_pow(int n, int p)$/;"	f
 ft_printfloatmatrix	libft/srcs/print/ft_printfloatmatrix.c	/^void		ft_printfloatmatrix(float **mat, size_t size)$/;"	f
 ft_printintarray	libft/srcs/print/ft_printintarray.c	/^void		ft_printintarray(int **map, size_t width, size_t height)$/;"	f
@@ -350,7 +319,6 @@ ft_range_num	libft/srcs/math/ft_range_num.c	/^double		ft_range_num(double input,
 ft_rol	libft/srcs/rand/ft_rol.c	/^unsigned int	ft_rol(const unsigned int value, int shift)$/;"	f
 ft_ror	libft/srcs/rand/ft_ror.c	/^unsigned int	ft_ror(const unsigned int value, int shift)$/;"	f
 ft_select_arg	srcs/ft_ls.c	/^static void		ft_select_arg(t_arg *arg, char c_arg)$/;"	f	file:
-ft_specialchar	libft/srcs/gfx/ft_mlx_printkeytochar.c	/^static char	ft_specialchar(int keycode)$/;"	f	file:
 ft_sqrt	libft/srcs/math/ft_sqrt.c	/^int		ft_sqrt(int nb)$/;"	f
 ft_stoul	libft/srcs/stdlib/ft_stoul.c	/^unsigned long		ft_stoul(const char *str, int base)$/;"	f
 ft_straddchar	libft/srcs/str/ft_straddchar.c	/^char		*ft_straddchar(char *src, char c)$/;"	f
@@ -399,10 +367,6 @@ ft_timecmp	srcs/utils.c	/^int			ft_timecmp(t_obj *obj1, t_obj *obj2)$/;"	f
 ft_tolower	libft/srcs/str/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
 ft_toupper	libft/srcs/str/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
 ft_v_flip	libft/srcs/tab/ft_v_flip.c	/^void		ft_v_flip(void **array, size_t columns, size_t rows, size_t nbytes)$/;"	f
-ft_vec3cpy	libft/srcs/gfx/ft_vec3cpy.c	/^void	ft_vec3cpy(t_vec3 *vec_from, t_vec3 *vec_to)$/;"	f
-ft_vec3new	libft/srcs/gfx/ft_vec3new.c	/^t_vec3		*ft_vec3new(double x, double y, double z)$/;"	f
-ft_vec3populate	libft/srcs/gfx/ft_vec3populate.c	/^void		ft_vec3populate(t_vec3 *to_vec3, double x, double y, double z)$/;"	f
-ft_xmpnew	libft/srcs/gfx/ft_xmpnew.c	/^t_img			*ft_xmpnew(void *mlx, char *xmp, size_t x, size_t y)$/;"	f
 g	includes/ft_ls_struct.h	/^	int				g;$/;"	m	struct:s_arg
 g	libft/includes/libft_struct.h	/^	unsigned char	g;$/;"	m	struct:s_color
 get_line	libft/srcs/perso/get_next_line.c	/^static int			get_line(t_str *buffer, int *num_char)$/;"	f	file:

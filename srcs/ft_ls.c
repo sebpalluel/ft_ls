@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 15:37:17 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/25 10:48:49 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/11/02 13:25:07 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void		ft_error_arg(char arg)
 {
 	ft_putstr_fd("ft_ls: illegal option -- ", 2);
 	ft_putchar_fd(arg, 2);
-	ft_putstr_fd("\nusage: ft_ls [-lRartgf] [file ...]\n", 2);
+	ft_putstr_fd("\nusage: ft_ls [-1lRartugf] [file ...]\n", 2);
 	exit(EXIT_FAILURE);
 }
 
@@ -32,6 +32,8 @@ static void		ft_select_arg(t_arg *arg, char c_arg)
 		arg->r = 1;
 	if (!arg->t && c_arg == 't')
 		arg->t = 1;
+	if (!arg->t && c_arg == 'u')
+		arg->u = 1;
 	if (!arg->g && c_arg == 'g')
 		arg->g = 1;
 	if (!arg->g && c_arg == 'f')
